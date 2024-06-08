@@ -1,0 +1,105 @@
+*{
+    font-family: "Gilroy";
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*  Header  */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+    margin-bottom: 35px;
+}
+.header-wr{
+    display: inherit;
+    flex-direction: row;
+    gap: 35px;
+}
+.header-wr > .request{
+    padding: 0 15px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    background-color: #138BD2;
+    font-weight: 500;
+}
+.header-wr > .contacts{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
+}
+.header-wr > .contacts > a{
+    font-weight: 500;
+    font-size: 14px;
+    color: #565455;
+    text-decoration: none;
+}
+/*  Header end  */
+
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    margin-right: 15vw;
+    margin-left: 15vw;
+}
+h1{
+    color: #3E62AC;
+    font-weight: 600;
+    font-size: min(9vw, 48px);
+}
+.h1-line{
+    width: 100%;
+    height: 1px;
+    background-color: #D4E1EB;
+}
+
+.equipment-wr{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 25px 10px;
+}
+
+/* Компонент для оборудования */ 
+
+.individual-wr{
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+    background-color: #F3F8FC;
+}
+p{
+    color: #5F6970;
+    font-weight: bold;
+}
+.more-btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    width: 100%;
+    padding: 8px 0;
+
+    background:none;
+    color: #35579C;
+    font-weight: 500;
+    border: 0;
+}
