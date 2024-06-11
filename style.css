@@ -59,6 +59,7 @@ header{
     text-decoration: none;
 }
 h1{
+    
     color: #3E62AC;
     font-weight: 600;
     font-size: min(9vw, 48px);
@@ -138,6 +139,8 @@ p{
     justify-content: center;
 
     background: rgba(0, 0, 0, 0.45);
+
+    display: none;
 }
 .pop-up{
     align-self: center;
