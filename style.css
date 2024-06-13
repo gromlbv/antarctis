@@ -65,7 +65,7 @@ h1{
 }
 h2{
     color: black;
-    font-size: min(5vw, 24px);
+    font-size: min(4vw, 24px);
     font-weight: 500;
     word-break: break-word;
     text-align: left;
@@ -159,6 +159,7 @@ p{
 
     
     width: 60vw;
+    max-width: 850px;
     max-height: 75vh;
     padding: 15px 35px 35px 35px;
 
