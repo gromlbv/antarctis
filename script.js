@@ -1,9 +1,12 @@
 $(function(){
   $("button").click(function(){
-    $(".fullscreen-absolute").fadeIn("300");
+    $(".muted-bg").css("z-index","10");
+    $(".fullscreen-absolute").css("display","flex");
+    $("body").css("overflow","hidden");
   }) // Закрытие окошка
-  $(".fullscreen-absolute").click(function(){
+  $(".muted-bg").click(function(){
+    $(".muted-bg").css("z-index","-1");
     $(".fullscreen-absolute").fadeOut("300");
+    $("body").css("overflow","hidden");
   })
-
 })
