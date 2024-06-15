@@ -35,16 +35,24 @@
                 <table>
                     <tbody>
                         <tr>
-                          <td>Холодо-производительность:</td>
-                          <td><input placeholder="От X до Y (кВт)"></td>
+                          <td>Холодо-производительность</td>
+                          <td><input placeholder="От X до Y">кВт</td>
                         </tr>
                         <tr>
-                          <td>Температура на выходе из чиллера:</td>
-                          <td><input placeholder="От X до Y (кВт)"></td>
+                            <td>Температура на выходе из чиллера</td>
+                            <td><input placeholder="От 5 до 25 ">°C</td>
+                        </tr>
+                        <tr>
+                            <td>Выносной конденсатор </td>
+                            <td><input placeholder="Выбрать">></td>
                         </tr>
                     </tbody>
                 </table>
-                <input type="submit" value="Продолжить">
+                <div class="bottom_btn">
+                    <input type="button" onclick="history.back()" value="<">
+                    <input type="submit" value="Продолжить">
+                </div>
+                
             </div>
         </div>
     </div>

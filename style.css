@@ -213,8 +213,9 @@ p{
 
 .settings-wr{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
+    gap: 35px;
     width: 100%;
 }
 .settings-wr > img{
@@ -226,30 +227,37 @@ p{
 }
 
 
-/*  Table  */
+/*  - Table  */
 
 table{
     display: flex;
     flex-direction: column;
-    border-radius: 18px;
-    padding: 15px 15px;
+    padding: 15px 0;
     width: 100%;
 }
 tbody{
     width: 100%;
 }
-
+tr{
+    display: flex;
+    width: 100%;
+    
+}
 td, input{
     background-color: white;
-    outline: none;
-    outline: #565455 2px solid;
+    outline: #D4D4D4 2px solid;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
+    color: #565455;
+    width: 50%;
 }
-td:first-of-type{
-    border-radius: 15px;
+td{
+    display: flex;
+    padding: 15px;
 }
 input{
+    width: 100%;
+    padding: -15px;
     box-sizing: border-box;
     outline: none;
     width: 100%;
@@ -258,11 +266,54 @@ input{
     border: 0;
     border-radius: 0;
 }
-tbody{
-    border: 2px #000000 solid;
+input::placeholder{
+    color: #B3B2B2;
 }
 
-/*  КОНЕЦ Table  */
+
+/*  -- Нижние кнопки  */
+.bottom_btn{
+    display: flex;
+    gap: 20px;
+}
+input[type=submit]{
+    background-color: #CDE1F0;
+    color: white;
+    border-radius: 18px;
+    height: 62px;
+    margin-bottom: 35px;
+    
+}
+input[type=button]{
+    color: #B4B4B4;
+    border: 2px #D4D4D4 solid;
+    border-radius: 18px;
+    height: 62px;
+    margin-bottom: 35px;
+    width: 5%;
+    min-width: 62px;
+}
+input[type=submit]:disabled{
+    background-color: #CDE1F0;
+}
+
+/*  -- КОНЕЦ Нижние кнопки  */
+
+
+tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 18px;
+}
+tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 18px;
+}
+tr:first-of-type td:first-of-type{
+    border-top-left-radius: 18px;
+}
+tr:first-of-type td:last-of-type{
+    border-top-right-radius: 18px;
+}
+
+/*  - КОНЕЦ Table  */
 
 
 /*  КОНЕЦ chiller-1-1  */

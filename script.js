@@ -10,3 +10,15 @@ $(function(){
     $("body").css("overflow","hidden");
   })
 })
+
+$("input[type=text]").change(function() {
+  var filled = true;
+  $("input[type=text]").each(function(index) {
+  if($( this ).val() == ""){
+    filled = false;
+  });
+  
+  if(filled === false){
+    $("input[type=submit]").css("background-color","red")
+  }
+});
