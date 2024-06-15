@@ -64,6 +64,14 @@ h1{
     font-size: min(9vw, 48px);
 }
 h2{
+    color: #565455;
+    font-size: min(6vw, 36px);
+    font-weight: 600;
+    word-break: break-word;
+    text-align: left;
+    margin: 0;
+}
+h3{
     color: black;
     font-size: min(4vw, 24px);
     font-weight: 500;
@@ -76,7 +84,7 @@ h2{
     height: 1px;
     background-color: #D4E1EB;
 }
-.h2-line{
+.h3-line{
     width: 100%;
     height: 1px;
     background-color: #D4E1EB;
@@ -198,3 +206,44 @@ p{
     overflow: auto;
 }
 /*  КОНЕЦ сплывающее окно чиллер  */ 
+
+
+
+/*  chiller-1-1  */
+
+.settings-wr{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+.settings-wr > img{
+    width: 40%;
+}
+.parametrs-wr{
+    width: 60%;
+    min-width: 550px;
+}
+.parametrs > table{
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+    border: 2px #D4D4D4 solid;
+    padding: 15px 15px;
+}
+td, input{
+    font-size: 18px;
+    font-weight: 400;
+}
+input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+}
+tbody{
+    border: 2px #000000 solid;
+}
+/*  КОНЕЦ chiller-1-1  */
