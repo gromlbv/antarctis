@@ -1,5 +1,5 @@
 $(function(){
-  $("button").click(function(){
+  $(".chiller-btn").click(function(){
     $(".muted-bg").css("z-index","10");
     $(".fullscreen-absolute").css("display","flex");
     $("body").css("overflow","hidden");

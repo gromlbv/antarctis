@@ -221,22 +221,37 @@ p{
     width: 40%;
 }
 .parametrs-wr{
-    width: 60%;
+    width: 100%;
     min-width: 550px;
 }
-.parametrs > table{
+
+
+/*  Table  */
+
+table{
     display: flex;
     flex-direction: column;
     border-radius: 18px;
-    border: 2px #D4D4D4 solid;
     padding: 15px 15px;
+    width: 100%;
 }
+tbody{
+    width: 100%;
+}
+
 td, input{
+    background-color: white;
+    outline: none;
+    outline: #565455 2px solid;
     font-size: 18px;
     font-weight: 400;
 }
+td:first-of-type{
+    border-radius: 15px;
+}
 input{
     box-sizing: border-box;
+    outline: none;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -246,4 +261,8 @@ input{
 tbody{
     border: 2px #000000 solid;
 }
+
+/*  КОНЕЦ Table  */
+
+
 /*  КОНЕЦ chiller-1-1  */
