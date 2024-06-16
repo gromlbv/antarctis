@@ -116,12 +116,24 @@ h3{
 
     border-radius: 15px;
     background-color: #F3F8FC;
+    outline: 2px solid #F3F8FC;
 }
 .individual-wr > img{
     object-fit: fill;
     height: 160px;
     width: auto;
 }
+.individual-wr:hover{
+    transition: .3s;
+    background-color: white;
+    outline: 2px solid #B4B4B4;
+    color: #B4B4B4;
+}
+.individual-wr:active{
+    transition: .1s;
+    outline: 2px solid #35579C;
+}
+
 p{
     color: #5F6970;
     font-weight: bold;
@@ -233,9 +245,13 @@ p{
     width: 100%;
 }
 .settings-wr > img{
-    width: 40%;
+    object-fit: contain;
+    height: 350px
 }
 .parametrs-wr{
+    display: flex;
+    flex-direction: column;
+
     width: 100%;
     min-width: 550px;
 }
@@ -244,8 +260,6 @@ p{
 /*  - Table  */
 
 table{
-    display: flex;
-    flex-direction: column;
     padding: 15px 0;
     width: 100%;
 }
@@ -263,7 +277,7 @@ td, input, select{
     font-size: 18px;
     font-weight: 500;
     color: #565455;
-    width: 50%;
+    width: 100%;
 }
 td{
     display: flex;
@@ -290,10 +304,11 @@ input::placeholder{
 
 
 /*  -- Нижние кнопки  */
-.bottom_btn{
+.bottom-btn{
     display: flex;
     gap: 20px;
 }
+
 input[type=submit]{
     background-color: #CDE1F0;
     color: white;
@@ -301,9 +316,10 @@ input[type=submit]{
     height: 62px;
     margin-bottom: 35px;
 }
-input[type=button]{
+input[type=button], .button-back{
     color: #B4B4B4;
     border: 2px #D4D4D4 solid;
+    background-color: white;
     border-radius: 18px;
     height: 62px;
     margin-bottom: 35px;
@@ -314,7 +330,10 @@ input[type=button]{
 input[type=submit]:disabled{
     background-color: #CDE1F0;
 }
-
+.button-back:hover{
+    border: 2px #B4B4B4 solid;
+    background-color: #D4D4D4;
+}
 /*  -- КОНЕЦ Нижние кнопки  */
 
 
@@ -337,3 +356,50 @@ td:last-child{
 
 
 /*  КОНЕЦ chiller-1-1  */
+
+
+@media only screen and (max-width: 1120px) {
+    .settings-wr {
+        flex-direction: column;
+    }
+    .settings-wr > img{
+        width: 100%;
+    }
+    .parametrs-wr{
+        min-width: 0;
+        width: 100%;
+    }
+    tbody{
+        width: auto;
+    }
+    td{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 695px) {
+    .wrapper{
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    tr{
+        flex-direction: column;
+    }
+    tr:last-of-type td:first-of-type {
+        border-bottom-left-radius: 0px;
+    }
+    tr:last-of-type td:last-of-type {
+        border-bottom-right-radius: 18px;
+        border-bottom-left-radius: 18px;
+    }
+    tr:first-of-type td:first-of-type{
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+    }
+    tr:first-of-type td:last-of-type{
+        border-top-right-radius: 0px;
+    }
+    table{
+        padding-right: 32px;
+    }
+}

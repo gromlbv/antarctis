@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antarctis</title>
+    <title>Antarctis - Чиллер по типу жидкости</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font-face.css">
 </head>
@@ -35,14 +35,14 @@
                     <tbody>
                         <tr>
                           <td>Расход воды</td>
-                          <td><input placeholder="От X до Y">м3/час</td>
+                          <td><input type="number" placeholder="От X до Y" min="1">м3/час</td>
                         </tr>
                         <tr>
                             <td>Температура на входе в чиллер</td>
-                            <td><input placeholder="От 5 до 25">°C</td></tr>
+                            <td><input type="number" placeholder="От 5 до 25" min="5" max="25">°C</td></tr>
                         <tr>
                             <td>Температура на выходе из чиллера</td>
-                            <td><input placeholder="От 5 до 25">°C</td></tr>
+                            <td><input type="number" placeholder="От 5 до 25" min="5" max="25">°C</td></tr>
                         <tr>
                             <td>Выносной конденсатор</td>
                             <td><select id="capacitor" name="capacitor">
@@ -52,8 +52,8 @@
                               </select></td></tr>
                     </tbody>
                 </table>
-                <div class="bottom_btn">
-                    <input type="button" onclick="history.back()" value="<">
+                <div class="bottom-btn">
+                    <button class="button-back" onclick="history.back()"><img src="source/arrow-back.svg" alt="<"></button>
                     <input type="submit" value="Продолжить">
                 </div>
                 
