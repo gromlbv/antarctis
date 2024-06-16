@@ -1,5 +1,6 @@
 $(function(){
   $(".chiller-btn").click(function(){
+    window.scrollTo(0, 0);
     $(".muted-bg").css("z-index","10");
     $(".fullscreen-absolute").css("display","flex");
     $("body").css("overflow","hidden");
@@ -7,18 +8,12 @@ $(function(){
   $(".muted-bg").click(function(){
     $(".muted-bg").css("z-index","-1");
     $(".fullscreen-absolute").fadeOut("300");
-    $("body").css("overflow","hidden");
+    $("body").css("overflow","auto");
   })
 })
 
-$("input[type=text]").change(function() {
-  var filled = true;
-  $("input[type=text]").each(function(index) {
-  if($( this ).val() == ""){
-    filled = false;
-  });
-  
-  if(filled === false){
-    $("input[type=submit]").css("background-color","red")
-  }
-});
+// цвет для select option "Выбрать"
+console.log($("#capacitor").text())
+if ($("#capacitor").text() == "Выбрать"){
+  console.log('aaa')
+}

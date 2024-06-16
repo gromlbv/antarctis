@@ -40,6 +40,9 @@ header{
     color: #565455;
     text-decoration: none;
 }
+header > img{
+    cursor: pointer;
+}
 
 /*  КОНЕЦ Header  */
 
@@ -113,6 +116,11 @@ h3{
 
     border-radius: 15px;
     background-color: #F3F8FC;
+}
+.individual-wr > img{
+    object-fit: fill;
+    height: 160px;
+    width: auto;
 }
 p{
     color: #5F6970;
@@ -188,6 +196,12 @@ p{
 
     cursor: pointer;
 }
+.pop-up > button:hover{
+    background-color: #D4E1EB;
+}
+.pop-up > button:active{
+    border: 2px solid #35579C;
+}
 .pop-up > button > img{
     width: 12%;
     max-width: 39px;
@@ -243,7 +257,7 @@ tr{
     width: 100%;
     
 }
-td, input{
+td, input, select{
     background-color: white;
     outline: #D4D4D4 2px solid;
     font-size: 18px;
@@ -254,8 +268,9 @@ td, input{
 td{
     display: flex;
     padding: 15px;
+    align-items: center;
 }
-input{
+input, select{
     width: 100%;
     padding: -15px;
     box-sizing: border-box;
@@ -265,6 +280,9 @@ input{
     margin: 0;
     border: 0;
     border-radius: 0;
+}
+select:disabled{
+    color: red;
 }
 input::placeholder{
     color: #B3B2B2;
@@ -282,7 +300,6 @@ input[type=submit]{
     border-radius: 18px;
     height: 62px;
     margin-bottom: 35px;
-    
 }
 input[type=button]{
     color: #B4B4B4;
@@ -292,6 +309,7 @@ input[type=button]{
     margin-bottom: 35px;
     width: 5%;
     min-width: 62px;
+    cursor: pointer;
 }
 input[type=submit]:disabled{
     background-color: #CDE1F0;
@@ -312,7 +330,9 @@ tr:first-of-type td:first-of-type{
 tr:first-of-type td:last-of-type{
     border-top-right-radius: 18px;
 }
-
+td:last-child{
+    text-align: right;
+}
 /*  - КОНЕЦ Table  */
 
 

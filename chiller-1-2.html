@@ -34,21 +34,22 @@
                 <table>
                     <tbody>
                         <tr>
-                          <td>Холодо-производительность</td>
-                          <td><input placeholder="От X до Y">кВт</td>
+                          <td>Расход воды</td>
+                          <td><input placeholder="От X до Y">м3/час</td>
                         </tr>
+                        <tr>
+                            <td>Температура на входе в чиллер</td>
+                            <td><input placeholder="От 5 до 25">°C</td></tr>
                         <tr>
                             <td>Температура на выходе из чиллера</td>
-                            <td><input placeholder="От 5 до 25 ">°C</td>
-                        </tr>
+                            <td><input placeholder="От 5 до 25">°C</td></tr>
                         <tr>
-                            <td>Выносной конденсатор </td>
-                            <td><select id="cars" name="cars">
-                                <option value="0">Выбрать</option>
-                                <option value="1">Есть</option>
-                                <option value="2">Отсутсвует</option>
-                              </select></td>
-                        </tr>
+                            <td>Выносной конденсатор</td>
+                            <td><select id="capacitor" name="capacitor">
+                                <option disabled selected value style="display:none;"> Выбрать </option>
+                                <option value="0">Есть</option>
+                                <option value="1">Отсутсвует</option>
+                              </select></td></tr>
                     </tbody>
                 </table>
                 <div class="bottom_btn">
