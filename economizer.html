@@ -21,34 +21,133 @@
         <div class="history-menu">
             <a href="http://antarctis.ru">Главная ></a>
             <a href="index.html">Подбор оборудования ></a>
-            Чиллер по холоду и теплопроизводительности
+            Экономайзер
         </div>
         <div>
-            <h1>Подбор чиллера «ЭРА» по холоду</h1>
+            <h1>Подбор экономайзера</h1>
             <div class="h1-line"></div>
         </div>
         <div class="settings-wr">
-            <img src="source/Chiller.png">
+            <img src="source/ERA350_front_fin 1.png">
             <div class="parametrs-wr">
                 <h2>Укажите необходимые параметры</h2>
                 <table>
                     <tbody>
                         <tr>
-                          <td>Холодо-производительность</td>
+                          <td>Требуемая холодопроизводительность</td>
                           <td><input type="number" placeholder="От X до Y">кВт</td></tr>
                         <tr>
-                            <td>Температура на выходе из чиллера</td>
-                            <td><input type="number" placeholder="От 5 до 25" min="5" max="25">°C</td></tr>
+                            <td>Расход воздуха</td>
+                            <td><input type="number" placeholder="От 5 до 25" min="5" max="25">м3/час</td></tr>
+                        <tr>
+                            <td>Проектная температура холодного коридора</td>
+                            <td><input type="number" placeholder="От ? до 25" min="5" max="25">°C</td></tr>
+                        <tr>
+                            <td>Проектная  температура горячего коридора</td>
+                            <td><input type="number" placeholder="От ? до 25" min="5" max="25">°C</td></tr>
                         <tr>
                             <td>Выносной конденсатор </td>
                             <td><select id="capacitor" name="capacitor">
                                 <option disabled selected value style="display:none;"> Выбрать </option>
-                                <option value="0">Есть</option>
-                                <option value="1">Отсутсвует</option>
+                                <option value="0">Республика Адыгея (Адыгея)</option>
+                                <option value="1">Республика Алтай</option>
+                                <option value="2">Республика Башкортостан</option>
+                                <option value="3">Республика Бурятия</option>
+                                <option value="4">Республика Дагестан</option>
+                                <option value="5">Донецкая Народная Республика</option>
+                                <option value="6">Республика Ингушетия</option>
+                                <option value="7">Кабардино-Балкарская Республика</option>
+                                <option value="8">Республика Калмыкия</option>
+                                <option value="9">Карачаево-Черкесская Республика</option>
+                                <option value="10">Республика Карелия</option>
+                                <option value="11">Республика Коми</option>
+                                <option value="12">Республика Крым</option>
+                                <option value="13">Луганская Народная Республика</option>
+                                <option value="14">Республика Марий Эл</option>
+                                <option value="15">Республика Мордовия</option>
+                                <option value="16">Республика Саха (Якутия)</option>
+                                <option value="17">Республика Северная Осетия - Алания</option>
+                                <option value="18">Республика Татарстан (Татарстан)</option>
+                                <option value="19">Республика Тыва</option>
+                                <option value="20">Удмуртская Республика</option>
+                                <option value="21">Республика Хакасия</option>
+                                <option value="22">Чеченская Республика</option>
+                                <option value="23">Чувашская Республика - Чувашия</option>
+                                <option value="24">Алтайский край</option>
+                                <option value="25">Забайкальский край</option>
+                                <option value="26">Камчатский край</option>
+                                <option value="27">Краснодарский край</option>
+                                <option value="28">Красноярский край</option>
+                                <option value="29">Пермский край</option>
+                                <option value="30">Приморский край</option>
+                                <option value="31">Ставропольский край</option>
+                                <option value="32">Хабаровский край</option>
+                                <option value="33">Амурская область</option>
+                                <option value="34">Архангельская область</option>
+                                <option value="35">Астраханская область</option>
+                                <option value="36">Белгородская область</option>
+                                <option value="37">Брянская область</option>
+                                <option value="38">Владимирская область</option>
+                                <option value="39">Волгоградская область</option>
+                                <option value="40">Вологодская область</option>
+                                <option value="41">Воронежская область</option>
+                                <option value="42">Запорожская область</option>
+                                <option value="43">Ивановская область</option>
+                                <option value="44">Иркутская область</option>
+                                <option value="45">Калининградская область</option>
+                                <option value="46">Калужская область</option>
+                                <option value="47">Кемеровская область - Кузбасс</option>
+                                <option value="48">Кировская область</option>
+                                <option value="49">Костромская область</option>
+                                <option value="50">Курганская область</option>
+                                <option value="51">Курская область</option>
+                                <option value="52">Ленинградская область</option>
+                                <option value="53">Липецкая область</option>
+                                <option value="54">Магаданская область</option>
+                                <option value="55">Московская область</option>
+                                <option value="56">Мурманская область</option>
+                                <option value="57">Нижегородская область</option>
+                                <option value="58">Новгородская область</option>
+                                <option value="59">Новосибирская область</option>
+                                <option value="60">Омская область</option>
+                                <option value="61">Оренбургская область</option>
+                                <option value="62">Орловская область</option>
+                                <option value="63">Пензенская область</option>
+                                <option value="64">Псковская область</option>
+                                <option value="65">Ростовская область</option>
+                                <option value="66">Рязанская область</option>
+                                <option value="67">Самарская область</option>
+                                <option value="68">Саратовская область</option>
+                                <option value="69">Сахалинская область</option>
+                                <option value="70">Свердловская область</option>
+                                <option value="71">Смоленская область</option>
+                                <option value="72">Тамбовская область</option>
+                                <option value="73">Тверская область</option>
+                                <option value="74">Томская область</option>
+                                <option value="75">Тульская область</option>
+                                <option value="76">Тюменская область</option>
+                                <option value="77">Ульяновская область</option>
+                                <option value="78">Херсонская область</option>
+                                <option value="79">Челябинская область</option>
+                                <option value="80">Ярославская область</option>
+                                <option value="81">Москва</option>
+                                <option value="82">Санкт-Петербург</option>
+                                <option value="83">Севастополь</option>
+                                <option value="84">Еврейская автономная область</option>
+                                <option value="85">Ненецкий автономный округ</option>
+                                <option value="86">Ханты-Мансийский автономный округ - Югра</option>
+                                <option value="87">Чукотский автономный округ</option>
+                                <option value="88">Ямало-Ненецкий автономный округ</option>
                               </select></td></tr>
                     </tbody>
                 </table>
-                <div class="bottom_btn">
+                <div class="more-param-wr">
+                    <button>Отобразить расширенные параметры</button>
+                    <div class="hidden-param">
+                        ТЕКСТ
+                    </div>
+                </div>
+                <div class="bottom-btn">
                     <button class="button-back" onclick="history.back()"><img src="source/arrow-back.svg" alt="Назад"></button>
                     <input type="submit" value="Продолжить">
                 </div>

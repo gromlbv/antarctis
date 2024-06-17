@@ -263,7 +263,8 @@ p{
 }
 .settings-wr > img{
     object-fit: contain;
-    max-width: 350px
+    max-width: 25vw;
+    width: 60%;
 }
 .parametrs-wr{
     display: flex;
@@ -271,13 +272,14 @@ p{
 
     width: 100%;
     min-width: 550px;
+    gap: 15px;
 }
 
 
 /*  - Table  */
 
 table{
-    padding: 15px 0;
+    /*padding: 15px 0;*/
     width: 100%;
 }
 tbody{
@@ -337,6 +339,30 @@ td:last-child{
 
 
 /*  - Нижние кнопки  */
+.more-param{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    
+    border: 2px #D4D4D4 solid;
+}
+.more-param-wr > button{
+    height: 62px;
+    width: 100%;
+    
+    background-color: white;
+    border: 2px #D4D4D4 solid;
+    border-radius: 18px;
+    
+    color: #565455;
+    font-size: 18px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+.hidden-param{
+    display: none;
+}
 .bottom-btn{
     display: flex;
     gap: 20px;
@@ -381,7 +407,7 @@ input[type=submit]:disabled{
         flex-direction: column;
     }
     .settings-wr > img{
-        width: 100%;
+        width: 50%;
     }
     .parametrs-wr{
         min-width: 0;
@@ -399,6 +425,9 @@ input[type=submit]:disabled{
     .wrapper{
         margin-left: 5vw;
         margin-right: 5vw;
+    }
+    .settings-wr > img{
+        max-width: inherit;
     }
     tr{
         flex-direction: column;
