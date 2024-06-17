@@ -403,3 +403,19 @@ td:last-child{
         padding-right: 32px;
     }
 }
+
+@media only screen and (max-width: 420px) {
+    .equipment-wr{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .individual-wr{
+        width: 100%;
+        padding: 25px 0;
+        margin: 0 25px;
+        max-width: 300px;
+    }
+    .more-btn{
+        padding: 8px 16px;
+    }
+}
