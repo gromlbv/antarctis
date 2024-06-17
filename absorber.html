@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antarctis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-face.css">
+</head>
+<body>
+    <header>
+        <img src="source/antarctis_logo.svg" onclick="window.location.href = 'https://antarctis.ru'">
+        <div class="header-wr">
+            <div class="contacts">
+                +7 (495) 121-70-47
+                <a href="">info@antarctis.ru</a>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="history-menu">
+            <a href="http://antarctis.ru">Главная ></a>
+            <a href="index.html">Подбор оборудования ></a>
+            Адсорбционный осушитель
+        </div>
+        <div>
+            <h1>Подбор адсорбционного осушителя</h1>
+            <div class="h1-line"></div>
+        </div>
+        <div class="settings-wr">
+            <img src="source/Absorber.png">
+            <div class="parametrs-wr">
+                <h2>Укажите необходимые параметры</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Объем осушаемого воздуха</td>
+                            <td><input type="number" placeholder="От X до Y">м3/час</td></tr>
+                        <tr>
+                            <td>Температура</td>
+                            <td><input type="number" placeholder="От X до Y">°С</td></tr>
+                        <tr>
+                            <td>Абсолютное влагосодержание</td>
+                            <td><input type="number" placeholder="От X до Y">г/кг</td></tr>
+                        <tr>
+                            <td>Объем приточного уличного воздуха</td>
+                            <td><input type="number" placeholder="От X до Y" min="5" max="25">м3/час</td></tr>
+                        <tr>
+                            <td>Температура?</td>
+                            <td><input type="number" placeholder="От X до Y" min="5" max="25">°C</td></tr>
+                        <tr>
+                            <td>Абсолютное влагосодержание</td>
+                            <td><input type="number" placeholder="От X до Y" min="5" max="25">г/кг</td></tr>
+                    </tbody>
+                </table>
+                <div class="more-param-wr">
+                    <button>Отобразить расширенные параметры</button>
+                    <div class="hidden-param">
+                        <div class="hidden-heading">
+                            <h2>Расширенные параметры</h2>
+                            <img src="source/close-btn.svg" alt="✕" draggable="false">
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Температура на выходе</td>
+                                    <td><input type="number" placeholder="От X до Y" min="5" max="25">г/кг</td></tr>
+                                <tr>
+                                    <td>Абсолютное влагосодержание на выходе</td>
+                                    <td><input type="number" placeholder="От X до Y" min="0">г/кг</td></tr>
+                                <tr>
+                                    <td>Тип реактивации ротора</td>
+                                    <td><select id="rotor_reactive" name="rotor_reactive">
+                                          <option value="0">Электричество</option>
+                                          <option value="1">Газ</option>
+                                          <option value="2">Вода</option>
+                                          <option value="3">Пар</option>
+                                      </select></td></tr>
+                                <tr>
+                                    <td>Протокол сетевого взаимодействия</td>
+                                    <td><input type="text" placeholder="Modbus RTU"></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="bottom-btn">
+                    <button class="button-back" onclick="history.back()"><img src="source/arrow-back.svg" alt="Назад" draggable="false"></button>
+                    <input type="submit" value="Продолжить">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

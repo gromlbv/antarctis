@@ -263,8 +263,10 @@ p{
 }
 .settings-wr > img{
     object-fit: contain;
+    object-position: top;
     max-width: 25vw;
     width: 60%;
+    max-height: 350px;
 }
 .parametrs-wr{
     display: flex;
@@ -339,12 +341,15 @@ td:last-child{
 
 
 /*  - Нижние кнопки  */
-.more-param{
+
+/*  -- Спрятанные параметры  */
+
+.more-param-wr{
     display: flex;
+    flex-direction: column;
     gap: 20px;
     width: 100%;
-    
-    border: 2px #D4D4D4 solid;
+
 }
 .more-param-wr > button{
     height: 62px;
@@ -361,8 +366,28 @@ td:last-child{
     cursor: pointer;
 }
 .hidden-param{
+    transition: 5s;
+    border: 2px #D4D4D4 solid;
+    
+    border-radius: 33px;
     display: none;
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
 }
+.hidden-heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 15px;
+}
+.hidden-heading > img{
+    cursor: pointer;
+}
+/*  -- КОНЕЦ Спрятанные параметры  */
+
 .bottom-btn{
     display: flex;
     gap: 20px;
@@ -389,9 +414,15 @@ input[type=button], .button-back{
 input[type=submit]:disabled{
     background-color: #CDE1F0;
 }
-.button-back:hover{
-    border: 2px #B4B4B4 solid;
-    background-color: #D4D4D4;
+.button-back:hover, .more-param-wr > button:hover{
+    transition: .2s;
+    border: 2px #B3B3B3 solid;
+}
+.button-back:active, .more-param-wr > button:active{
+    transition: .2s;
+    border: 2px #565455 solid;
+    background-color: #565455;
+    color: white;
 }
 /*  - КОНЕЦ Нижние кнопки  */
 

@@ -17,3 +17,14 @@ console.log($("#capacitor").text())
 if ($("#capacitor").text() == "Выбрать"){
   console.log('aaa')
 }
+
+$(function(){
+  $(".more-param-wr > button").click(function(){
+    $(".more-param-wr > button").css("display","none");
+    $(".hidden-param").css("display","flex");
+  }) // Закрытие окошка
+  $(".hidden-heading > img").click(function(){
+    $(".more-param-wr > button").css("display","block");
+    $(".hidden-param").css("display","none");
+  })
+})

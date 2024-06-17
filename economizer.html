@@ -46,9 +46,9 @@
                             <td>Проектная  температура горячего коридора</td>
                             <td><input type="number" placeholder="От ? до 25" min="5" max="25">°C</td></tr>
                         <tr>
-                            <td>Выносной конденсатор </td>
-                            <td><select id="capacitor" name="capacitor">
-                                <option disabled selected value style="display:none;"> Выбрать </option>
+                            <td>Регион</td>
+                            <td><select id="region" name="region">
+                                <option disabled selected value style="display:none;">Выбрать</option>
                                 <option value="0">Республика Адыгея (Адыгея)</option>
                                 <option value="1">Республика Алтай</option>
                                 <option value="2">Республика Башкортостан</option>
@@ -144,11 +144,34 @@
                 <div class="more-param-wr">
                     <button>Отобразить расширенные параметры</button>
                     <div class="hidden-param">
-                        ТЕКСТ
+                        <div class="hidden-heading">
+                            <h2>Расширенные параметры</h2>
+                            <img src="source/close-btn.svg" alt="✕" draggable="false">
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                  <td>Наличие системы дохолаживания</td>
+                                  <td><select id="capacitor" name="capacitor">
+                                        <option value="0">Нет</option>
+                                        <option value="1">Водяная</option>
+                                        <option value="2">Фреоновая</option>
+                                    </select></td></tr>
+                                <tr>
+                                    <td>Наличие системы дохолаживания</td>
+                                    <td><select id="capacitor" name="capacitor">
+                                          <option value="0">Без увлажнителя</option>
+                                          <option value="1">С увлажнителем</option>
+                                      </select></td></tr>
+                                <tr>
+                                    <td>Протокол сетевого взаимодействия</td>
+                                    <td><input type="text" placeholder="Modbus RTU"></td></tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="bottom-btn">
-                    <button class="button-back" onclick="history.back()"><img src="source/arrow-back.svg" alt="Назад"></button>
+                    <button class="button-back" onclick="history.back()"><img src="source/arrow-back.svg" alt="Назад" draggable="false"></button>
                     <input type="submit" value="Продолжить">
                 </div>
                 
