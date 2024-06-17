@@ -46,6 +46,7 @@ header > img{
 
 /*  КОНЕЦ Header  */
 
+/*  Первая страничка  */
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -102,7 +103,7 @@ h3{
     grid-gap: 25px 10px;
 }
 
-/*  Компонент для оборудования  */ 
+/*  - Компонент для оборудования  */ 
 
 .individual-wr{
     width: 15vw;
@@ -154,10 +155,25 @@ p{
 
     cursor: pointer;
 }
+@media only screen and (max-width: 420px) {
+    .equipment-wr{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .individual-wr{
+        width: 100%;
+        padding: 25px 0;
+        margin: 0 25px;
+        max-width: 300px;
+    }
+    .more-btn{
+        padding: 8px 16px;
+    }
+}
 
-/*  КОНЕЦ Компонент для оборудования  */ 
+/*  - КОНЕЦ Компонент для оборудования  */ 
 
-/*  Всплывающее окно чиллер  */ 
+/*  - Всплывающее окно чиллер  */ 
 
 .fullscreen-absolute{
     position: absolute;
@@ -231,8 +247,9 @@ p{
     height: 100%;
     overflow: auto;
 }
-/*  КОНЕЦ сплывающее окно чиллер  */ 
+/*  - КОНЕЦ сплывающее окно чиллер  */ 
 
+/*  КОНЕЦ Первая страничка  */
 
 
 /*  chiller-1-1  */
@@ -246,7 +263,7 @@ p{
 }
 .settings-wr > img{
     object-fit: contain;
-    height: 350px
+    max-width: 350px
 }
 .parametrs-wr{
     display: flex;
@@ -301,9 +318,25 @@ select:disabled{
 input::placeholder{
     color: #B3B2B2;
 }
+tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 18px;
+}
+tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 18px;
+}
+tr:first-of-type td:first-of-type{
+    border-top-left-radius: 18px;
+}
+tr:first-of-type td:last-of-type{
+    border-top-right-radius: 18px;
+}
+td:last-child{
+    text-align: right;
+}
+/*  - КОНЕЦ Table  */
 
 
-/*  -- Нижние кнопки  */
+/*  - Нижние кнопки  */
 .bottom-btn{
     display: flex;
     gap: 20px;
@@ -334,25 +367,10 @@ input[type=submit]:disabled{
     border: 2px #B4B4B4 solid;
     background-color: #D4D4D4;
 }
-/*  -- КОНЕЦ Нижние кнопки  */
+/*  - КОНЕЦ Нижние кнопки  */
 
 
-tr:last-of-type td:first-of-type {
-    border-bottom-left-radius: 18px;
-}
-tr:last-of-type td:last-of-type {
-    border-bottom-right-radius: 18px;
-}
-tr:first-of-type td:first-of-type{
-    border-top-left-radius: 18px;
-}
-tr:first-of-type td:last-of-type{
-    border-top-right-radius: 18px;
-}
-td:last-child{
-    text-align: right;
-}
-/*  - КОНЕЦ Table  */
+
 
 
 /*  КОНЕЦ chiller-1-1  */
@@ -404,18 +422,8 @@ td:last-child{
     }
 }
 
-@media only screen and (max-width: 420px) {
-    .equipment-wr{
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
-    .individual-wr{
-        width: 100%;
-        padding: 25px 0;
-        margin: 0 25px;
-        max-width: 300px;
-    }
-    .more-btn{
-        padding: 8px 16px;
+@media only screen and (max-width: 290px) {
+    td {
+        margin-right: -225px;
     }
 }
