@@ -62,6 +62,9 @@ header > img{
     color: #5F6970;
     text-decoration: none;
 }
+.history-menu > a:hover{
+    color: #B4B4B4;
+}
 h1{
     color: #3E62AC;
     font-weight: 600;
@@ -100,19 +103,20 @@ h3{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    grid-gap: 25px 10px;
+    grid-gap: 25px 12px;
 }
 
 /*  - Компонент для оборудования  */ 
 
 .individual-wr{
-    width: 15vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 25px;
-
+    
+    width: 19%;
+    height: 290px;
     padding: 25px;
 
     border-radius: 15px;
@@ -155,7 +159,16 @@ p{
 
     cursor: pointer;
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 1420px) {
+    .individual-wr{
+        width: 36%;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .header-wr{
+        display: none;
+    }
     .equipment-wr{
         flex-direction: column;
         flex-wrap: nowrap;
@@ -170,6 +183,7 @@ p{
         padding: 8px 16px;
     }
 }
+
 
 /*  - КОНЕЦ Компонент для оборудования  */ 
 
