@@ -22,9 +22,14 @@ $(function(){
   $(".more-param-wr > button").click(function(){
     $(".more-param-wr > button").css("display","none");
     $(".hidden-param").css("display","flex");
+    $(".more-param-wr")
+      .animate({borderRadius: 33}, 100, "linear");
+    
   }) // Закрытие окошка
   $(".hidden-heading > img").click(function(){
     $(".more-param-wr > button").css("display","block");
     $(".hidden-param").css("display","none");
+    $(".more-param-wr")
+      .animate({borderRadius: 18}, 50, "linear");
   })
 })
