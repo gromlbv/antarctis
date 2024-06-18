@@ -69,6 +69,7 @@ h1{
     color: #3E62AC;
     font-weight: 600;
     font-size: min(9vw, 48px);
+    /* margin: 1%; */
 }
 h2{
     color: #565455;
@@ -332,8 +333,37 @@ input, select{
     border: 0;
     border-radius: 0;
 }
-select:disabled{
-    color: red;
+select::-webkit-scrollbar {
+    margin-top: 1px;
+    width: 10px;
+    height: 10px;
+}
+
+select::-webkit-scrollbar-track {
+    border: rgb(180, 180, 180);
+    background-color: rgba(255, 255, 255, 0);
+}
+select::-webkit-scrollbar-thumb {
+    background-color: #138BD2;
+    border: 1px solid white;
+    border-radius:15px;
+}
+
+select option{
+    
+    outline: 1px solid red;
+    border-radius: 15px;
+    background-color: #138BD2;
+    color: white;
+}
+
+option:not(:checked) {
+  background-color: #fff;
+  color: #565455;
+}
+select{
+    border-radius: 33px;
+    
 }
 input::placeholder{
     color: #B3B2B2;
@@ -375,7 +405,7 @@ td:last-child{
     
     background-color: #ffffff00;
     border: 0 #D4D4D4 solid;
-    border-radius: 18px;
+    border-radius: 16px;
     
     color: #565455;
     font-size: 18px;
