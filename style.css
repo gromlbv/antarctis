@@ -69,6 +69,7 @@ h1{
     color: #3E62AC;
     font-weight: 600;
     font-size: min(9vw, 48px);
+    margin: 0;
     /* margin: 1%; */
 }
 h2{
@@ -80,7 +81,7 @@ h2{
     margin: 0;
 }
 h3{
-    color: black;
+    color: #565455;
     font-size: min(4vw, 24px);
     font-weight: 500;
     word-break: break-word;
@@ -91,6 +92,10 @@ h3{
     width: 100%;
     height: 1px;
     background-color: #D4E1EB;
+}
+.h2-line{
+    width: 1px;
+    background-color: #B4B4B4;
 }
 .h3-line{
     width: 100%;
@@ -534,3 +539,78 @@ input[type=submit]:disabled{
         margin-right: -225px;
     }
 }
+
+
+
+/*  Личный профиль  */
+.gap25{
+    gap: 25px;
+}
+.h2-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.pdf-card-wr{
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+}
+.pdf-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+    padding: 35px;
+
+    border: 2px #D4D4D4 solid;
+    border-radius: 35px;
+}
+
+.pdf-card > .heading{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+    gap: 5px;
+}
+.pdf-card > .heading > h3{
+    font-weight: 600;
+}
+.pdf-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 15px 10px 10px;
+    
+    border: 2px #138BD2 solid;
+    border-radius: 14px;
+    background-color: #138BD2;
+    color: white;
+
+    font-size: 18px;
+}
+.pdf-btn:hover{
+    transition: .2s;
+    background-color: #41a5df;
+    border: 2px #ffffff00 solid;
+}
+.pdf-btn:active{
+    transition: .1s;
+    border: 2px #ffffff00 solid;
+    background-color: #41a5df80;
+    color: white;
+}
+img{
+    transition: .2s;
+}
+.pdf-btn:active > img{
+    transition: .2s;
+    filter: brightness(1.5);
+}
+/*  КОНЕЦ Личный профиль  */
