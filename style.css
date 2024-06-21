@@ -211,7 +211,7 @@ p{
 }
 .pop-up{
     z-index: 50;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
 
     
@@ -226,7 +226,7 @@ p{
     width: 60vw;
     max-width: 850px;
     max-height: 75vh;
-    padding: 15px 35px 35px 35px;
+    padding: 35px 35px 35px 35px;
 
     border-radius: 30px;
     background: #FFF;
