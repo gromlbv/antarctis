@@ -555,6 +555,8 @@ input[type=submit]:disabled{
 
 .pdf-card-wr{
     display: flex;
+    gap: 25px;
+
     width: 100%;
     overflow-x: auto;
 }
@@ -608,10 +610,15 @@ input[type=submit]:disabled{
     color: white;
 }
 img{
-    transition: .2s;
+    transition: .1s;
 }
 .pdf-btn:active > img{
-    transition: .2s;
+    transition: .1s;
     filter: brightness(1.5);
 }
 /*  КОНЕЦ Личный профиль  */
+@media only screen and (max-width: 620px) {
+    .pdf-card-wr{
+        flex-direction: column;
+    }
+}
