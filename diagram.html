@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Термодинамический калькулятор</title>
+</head>
+<body>
+    <h1>Термодинамический калькулятор</h1>
+    <form id="calc-form">
+        <label for="t1">Температура (°C):</label>
+        <input type="number" id="t1" step="0.01" required><br>
+
+        <label for="fi1">Влажность (%):</label>
+        <input type="number" id="fi1" step="0.01" required><br>
+
+        <label for="d1">Давление (мм рт. ст.):</label>
+        <input type="number" id="d1" step="0.01" required><br>
+
+        <label for="i1">Индекс теплоты (J/kg·K):</label>
+        <input type="number" id="i1" step="0.01" required><br>
+
+        <label for="p1">Давление (Па):</label>
+        <input type="number" id="p1" step="0.01" required><br>
+
+        <label for="tr1">Тепловая мощность (Вт):</label>
+        <input type="number" id="tr1" step="0.01" required><br>
+
+        <button type="button" onclick="calculate()">Рассчитать</button>
+    </form>
+
+    <h2>Результаты:</h2>
+    <p>t1: <span id="result-t1"></span></p>
+    <p>fi1: <span id="result-fi1"></span></p>
+    <p>d1: <span id="result-d1"></span></p>
+    <p>i1: <span id="result-i1"></span></p>
+    <p>p1: <span id="result-p1"></span></p>
+    <p>tr1: <span id="result-tr1"></span></p>
+
+    <script>
+        function calculate() {
+            const t1 = parseFloat(document.getElementById('t1').value);
+            const fi1 = parseFloat(document.getElementById('fi1').value);
+            const d1 = parseFloat(document.getElementById('d1').value);
+            const i1 = parseFloat(document.getElementById('i1').value);
+            const p1 = parseFloat(document.getElementById('p1').value);
+            const tr1 = parseFloat(document.getElementById('tr1').value);
+
+            // Здесь можно добавить логику для вычислений
+
+            // Вывод результатов
+            document.getElementById('result-t1').textContent = t1.toFixed(2);
+            document.getElementById('result-fi1').textContent = fi1.toFixed(2);
+            document.getElementById('result-d1').textContent = d1.toFixed(2);
+            document.getElementById('result-i1').textContent = i1.toFixed(2);
+            document.getElementById('result-p1').textContent = (p1 / 1000).toFixed(2);
+            document.getElementById('result-tr1').textContent = tr1.toFixed(2);
+        }
+    </script>
+</body>
+</html>
