@@ -1,0 +1,926 @@
+/************************************************************************************
+VARIABLES
+*************************************************************************************/
+
+:root {
+    --primary-color: #1b1b1b;
+}
+
+/************************************************************************************
+RESET
+*************************************************************************************/
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, p, pre, table, 
+dd, dt, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object,
+a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
+strong, sub, sup, tt, var, legend, fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+img, fieldset {
+	border: 0;
+}
+
+/* set image max width to 100% */
+img {
+	max-width: 100%;
+	padding:0px;
+	margin:0px;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
+
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+#branding_link {
+    width:100%;
+    height: 100%;
+    position:absolute;
+    z-index:1;
+}
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+#pagewrap {
+	margin: 0 auto;
+	margin-right: 18vw;
+    margin-left: 18vw;
+    margin-bottom: 5vw;
+}
+
+*{
+    font-family: "Gilroy";
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*  Header  */
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+    margin-bottom: 35px;
+}
+.header-wr{
+    display: inherit;
+    flex-direction: row;
+    gap: 35px;
+}
+.header-wr > .request{
+    padding: 0 15px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    background-color: #138BD2;
+    font-weight: 500;
+}
+.header-wr > .contacts{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
+}
+.header-wr > .contacts > a{
+    font-weight: 500;
+    font-size: 14px;
+    color: #565455;
+    text-decoration: none;
+}
+header > img{
+    cursor: pointer;
+}
+
+/*  КОНЕЦ Header  */
+
+/*  Первая страничка  */
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    margin-right: 15vw;
+    margin-left: 15vw;
+    margin-bottom: 5vw;
+}
+.history-menu{
+    color: #138BD2;
+}
+.history-menu > a{
+    color: #5F6970;
+    text-decoration: none;
+}
+.history-menu > a:hover{
+    color: #B4B4B4;
+}
+h1{
+    color: #3E62AC;
+    font-weight: 600;
+    font-size: min(9vw, 48px);
+    margin: 0;
+	text-align: left;
+    /* margin: 1%; */
+}
+h2{
+    color: #565455;
+    font-size: min(6vw, 36px);
+    font-weight: 600;
+    word-break: break-word;
+    text-align: left;
+    margin: 0;
+}
+h3{
+    color: #565455;
+    font-size: min(5vw, 24px);
+    font-weight: 500;
+    word-break: break-word;
+    text-align: left;
+    margin: 0;
+}
+.h1-line{
+    width: 100%;
+    height: 1px;
+    background-color: #D4E1EB;
+}
+.h2-line{
+    width: 1px;
+    background-color: #B4B4B4;
+}
+.h3-line{
+    width: 100%;
+    height: 1px;
+    background-color: #D4E1EB;
+}
+
+.equipment-wr{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 25px 12px;
+}
+
+/*  - Компонент для оборудования  */ 
+
+.individual-wr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    
+    width: 19%;
+    height: 290px;
+    padding: 25px;
+
+    border-radius: 15px;
+    background-color: #F3F8FC;
+    outline: 2px solid #F3F8FC;
+}
+.individual-wr > img{
+    object-fit: fill;
+    height: 160px;
+    width: auto;
+}
+.individual-wr:hover{
+    transition: .3s;
+    background-color: white;
+    outline: 2px solid #B4B4B4;
+    color: #B4B4B4;
+}
+.individual-wr:active{
+    transition: .1s;
+    outline: 2px solid #35579C;
+}
+
+p{
+    font-size: 16px;
+    color: #5F6970;
+    font-weight: bold;
+}
+.more-btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    width: 100%;
+    padding: 8px 0;
+
+    background:none;
+    color: #35579C;
+    font-weight: 500;
+    border: 0;
+
+    cursor: pointer;
+}
+@media only screen and (max-width: 1420px) {
+    .individual-wr{
+        width: 36%;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .header-wr{
+        display: none;
+    }
+    .equipment-wr{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .individual-wr{
+        width: 100%;
+        padding: 25px 0;
+        margin: 0 25px;
+        max-width: 300px;
+    }
+    .more-btn{
+        padding: 8px 16px;
+    }
+}
+
+
+/*  - КОНЕЦ Компонент для оборудования  */ 
+
+/*  - Всплывающее окно чиллер  */ 
+
+.fullscreen-absolute{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    display: none;
+
+}
+.pop-up{
+    z-index: 50;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    
+    display: flex;
+    align-self: center;
+    
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+    
+    width: 60vw;
+    max-width: 850px;
+    max-height: 75vh;
+    padding: 35px 35px 35px 35px;
+
+    border-radius: 30px;
+    background: #FFF;
+}
+.pop-up > button{
+    display: flex;
+    padding: 15px 25px;
+    justify-content: left;
+    align-items: center;
+    gap: 25px;
+    align-self: stretch;
+
+    border-radius: 15px;
+    border: 2px solid #D4E1EB;
+    background-color: white;
+
+    cursor: pointer;
+}
+.pop-up > button:hover{
+    transition: .3s;
+    background-color: #D4E1EB;
+}
+.pop-up > button:active{
+    transition: .1s;
+    border: 2px solid #35579C;
+}
+.pop-up > button > img{
+    width: 12%;
+    max-width: 39px;
+}
+.pop-up > img{
+    align-self: center;
+    width: 25vw;
+}
+.muted-bg{
+    cursor: pointer;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+/*  - КОНЕЦ сплывающее окно чиллер  */ 
+
+/*  КОНЕЦ Первая страничка  */
+
+
+/*  chiller-1-1  */
+
+.settings-wr{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 35px;
+    width: 100%;
+}
+.settings-wr > img{
+    object-fit: contain;
+    object-position: top;
+    max-width: 25vw;
+    width: 60%;
+    max-height: 350px;
+}
+.parametrs-wr{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-width: 550px;
+    gap: 15px;
+}
+
+
+/*  - Table  */
+
+table{
+    /*padding: 15px 0;*/
+    width: 100%;
+}
+tbody{
+    width: 100%;
+}
+tr{
+    display: flex;
+    width: 100%;
+    
+}
+td, input, select{
+    background-color: white;
+    outline: #D4D4D4 2px solid;
+    font-size: 18px;
+    font-weight: 500;
+	text-align: left;
+    color: #565455;
+    width: 100%;
+}
+
+td{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+}
+input, select{
+    width: 100%;
+    padding: -15px;
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+}
+select::-webkit-scrollbar {
+    margin-top: 1px;
+    width: 10px;
+    height: 10px;
+}
+
+select::-webkit-scrollbar-track {
+    border: rgb(180, 180, 180);
+    background-color: rgba(255, 255, 255, 0);
+}
+select::-webkit-scrollbar-thumb {
+    background-color: #138BD2;
+    border: 1px solid white;
+    border-radius:15px;
+}
+
+select option{
+    
+    outline: 1px solid red;
+    border-radius: 15px;
+    background-color: #138BD2;
+    color: white;
+}
+
+option:not(:checked) {
+  background-color: #fff;
+  color: #565455;
+}
+select{
+    border-radius: 33px;
+    
+}
+input::placeholder{
+    color: #B3B2B2;
+}
+tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 18px;
+}
+tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 18px;
+}
+tr:first-of-type td:first-of-type{
+    border-top-left-radius: 18px;
+}
+tr:first-of-type td:last-of-type{
+    border-top-right-radius: 18px;
+}
+td:last-child{
+    text-align: right;
+}
+/*  - КОНЕЦ Table  */
+
+
+/*  - Нижние кнопки  */
+
+/*  -- Спрятанные параметры  */
+
+.more-param-wr{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    border: 2px #D4D4D4 solid;
+    border-radius: 18px;
+}
+.more-param-wr > button{
+    height: 62px;
+    width: 100%;
+    
+    background-color: #ffffff00;
+    border: 0 #D4D4D4 solid;
+    border-radius: 16px;
+    
+    color: #565455;
+    font-size: 18px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+.hidden-param{
+    transition: 5s;
+    
+    border-radius: 33px;
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+}
+.hidden-heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 15px;
+}
+.hidden-heading > img{
+    cursor: pointer;
+}
+/*  -- КОНЕЦ Спрятанные параметры  */
+
+.bottom-btn{
+    display: flex;
+    gap: 20px;
+}
+
+input[type=submit]{
+    background-color: #CDE1F0;
+    color: white;
+    border-radius: 18px;
+    height: 62px;
+    margin-bottom: 35px;
+}
+input[type=button], .button-back{
+    color: #B4B4B4;
+    border: 2px #D4D4D4 solid;
+    background-color: white;
+    border-radius: 18px;
+    height: 62px;
+    margin-bottom: 35px;
+    width: 5%;
+    min-width: 62px;
+    cursor: pointer;
+}
+input[type=submit]:disabled{
+    background-color: #CDE1F0;
+}
+.button-back:hover, .more-param-wr:hover{
+    transition: .1s;
+    border: 2px #B3B3B3 solid;
+}
+.button-back:active, .more-param-wr > button:active{
+    transition: .2s;
+    border: 2px #565455 solid;
+    background-color: #565455;
+    color: white;
+}
+/*  - КОНЕЦ Нижние кнопки  */
+
+
+
+
+
+/*  КОНЕЦ chiller-1-1  */
+
+
+@media only screen and (max-width: 1120px) {
+    .settings-wr {
+        flex-direction: column;
+    }
+    .settings-wr > img{
+        width: 50%;
+    }
+    .parametrs-wr{
+        min-width: 0;
+        width: 100%;
+    }
+    tbody{
+        width: auto;
+    }
+    td{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 695px) {
+    #pagewrap{
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    .settings-wr > img{
+        max-width: inherit;
+    }
+    tr{
+        flex-direction: column;
+    }
+    tr:last-of-type td:first-of-type {
+        border-bottom-left-radius: 0px;
+    }
+    tr:last-of-type td:last-of-type {
+        border-bottom-right-radius: 18px;
+        border-bottom-left-radius: 18px;
+    }
+    tr:first-of-type td:first-of-type{
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+    }
+    tr:first-of-type td:last-of-type{
+        border-top-right-radius: 0px;
+    }
+    table{
+        padding-right: 32px;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    td {
+        margin-right: -225px;
+    }
+}
+
+
+
+/*  Личный профиль  */
+.gap25{
+    gap: 25px;
+}
+.h2-wrapper{
+    display: flex;
+    flex-direction: row;
+	align-items: baseline;
+    gap: 15px;
+}
+
+.pdf-card-wr{
+    display: flex;
+    gap: 25px;
+
+    width: 100%;
+    overflow-x: auto;
+}
+.pdf-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+    padding: 35px;
+
+    border: 2px #D4D4D4 solid;
+    border-radius: 35px;
+}
+
+.pdf-card > .heading{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: row;
+    gap: 5px;
+}
+.pdf-card > .heading > h3{
+    font-weight: 600;
+}
+.pdf-card > .heading > p{
+    font-weight: 500;
+}
+.pdf-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 15px 10px 10px;
+    
+    border: 2px #138BD2 solid;
+    border-radius: 14px;
+    background-color: #138BD2;
+    color: white;
+
+    font-size: 18px;
+}
+.pdf-btn:hover{
+    transition: .2s;
+    background-color: #41a5df;
+    border: 2px #ffffff00 solid;
+}
+.pdf-btn:active{
+    transition: .1s;
+    border: 2px #ffffff00 solid;
+    background-color: #41a5df80;
+    color: white;
+}
+img{
+    transition: .1s;
+}
+.pdf-btn:active > img{
+    transition: .1s;
+    filter: brightness(1.5);
+}
+
+/*  КОНЕЦ Личный профиль  */
+@media only screen and (max-width: 620px) {
+    .pdf-card-wr{
+        flex-direction: column;
+    }
+}
+
+
+
+
+select {
+    height: 30px;
+    border: solid 1px #d8d8d8;
+    padding-left: 7px;
+}
+select:hover {
+    cursor: pointer;
+}
+input[type="checkbox"], input[type="radio"] {
+    height:15px;
+	width: 20px;
+	margin-right: 5px;
+}
+.dot {
+	font-weight:normal;
+	font-size:smaller;
+	float:right;
+}
+.dot:hover {
+	cursor:pointer;
+}
+#error1{
+    color:#138BD2;
+}
+/*  - КОНЕЦ Table  */
+
+.demo-container {
+	box-sizing: border-box;
+	width: 696px;
+	height: 100vw;
+	max-height: 80vh;
+	padding: 25px 30px 25px 15px;
+	margin: 15px auto 30px auto;
+	border: 2px solid #D4D4D4;
+	border-radius: 35px;
+	background: white;
+	width: 100%;
+}
+
+.demo-placeholder {
+	background: #fff;
+	background: url('/calc/logo-mkhwh-300x95.png') center repeat-y;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	line-height: 1.2em;
+}
+
+table.fcast {
+	border: 0px;
+}
+table.fcast td {
+	width: 120px;
+	border: 0px;
+	padding: 3px 10px;
+	border-image-width: 0px;
+}
+table.fcast th {
+	width: 175px;
+	border: 0px;
+	padding: 3px 10px;
+	font-weight: normal; 
+	text-align: left;	
+}
+table.fcast td h3 img{
+	margin-left: 10px;
+}
+table.fcast th h3 img{
+	margin-left: 10px;
+}
+table.fcast td div {
+	margin: -3px -10px;
+	width: 140px;
+	overflow: hidden;
+}
+table.fcast th div {
+	margin: -3px -10px;
+	position: relative;
+	width: 195px;
+	overflow: hidden;
+}
+table.fcast th div div {
+	position: absolute;
+	top: 7px;
+	left: 20px;
+}
+
+
+
+
+table {
+/*    border-spacing: 8px 3px;*/
+	margin: 10px auto 10px auto;
+    border-collapse: collapse;
+}
+table tr th, table caption {
+	font-weight: bold;
+	padding: 5px 9px;
+	text-align: center;
+	background: #138BD2;
+	color: #fff;
+}
+table tr td a, table tr th a {
+	display: block;
+	height: 100%;
+	text-decoration: none;
+}
+table tr td a:hover, table tr th a:hover, div a:hover {
+	text-decoration: underline;
+}
+/*
+table tr:hover td{
+	background: #f0f0f0;
+}
+table tr:hover td > input{
+	background: #f0f0f0;
+}
+*/
+td > input{
+	height: 100%;
+}
+td:last-child{
+	white-space: nowrap;
+}
+tr:last-child{
+	white-space: wrap;
+}
+table.left td { text-align: left; }
+table tr td.nolink a, table tr th.nolink a {
+	display: inline;
+	height: 100%;
+	text-decoration: none;
+}
+table tr td.nolink a:hover, table tr th.nolink a:hover {
+	text-decoration: underline;
+}
+.table_scroll {
+    overflow: auto;
+}
+
+tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 18px;
+}
+tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 18px;
+}
+tr:first-of-type th:first-of-type{
+    border-top-left-radius: 18px;
+}
+tr:first-of-type th:last-of-type{
+    border-top-right-radius: 18px;
+}
+
+table.smart {
+/*    border-spacing: 8px 3px;*/
+	margin: 6px auto 6px auto;
+    border: 1px solid #fff;
+}
+table.smart tr td {
+    vertical-align: middle;
+	padding: 5px 9px;
+	text-align: center;
+    border: 1px solid #fff;
+/*    border-radius: 5px;*/
+    background: white;
+}
+table.smart tr th, table.smart caption {
+	font-weight: bold;
+	padding: 5px 9px;
+	text-align: center;
+    border: 1px solid #fff;
+/*	border-radius: 5px;*/
+	background: #26abff;
+	color: #fff;
+}
+table.smart tr td a, table.smart tr th a, div.smart a {
+	display: block;
+	height: 100%;
+	text-decoration: none;
+}
+table.smart tr td a:hover, table.smart tr th a:hover, div.smart a:hover {
+	text-decoration: underline;
+}
+table.smart tr:hover td              {    background: #f0f0f0;   }
+table.smart.left td { text-align: left; }
+table.smart tr td.nolink a, table.smart tr th.nolink a {
+	display: inline;
+	height: 100%;
+	text-decoration: none;
+}
+table.smart tr td.nolink a:hover, table.smart tr th.nolink a:hover {
+	text-decoration: underline;
+}
+
+tr.odd {
+	background: #f8fbff;
+}
+
+table.also tr th {
+	padding: 2px 9px;
+	font-weight: bold; 
+}
+table.also tr td {
+	padding: 0px 3px 0px 6px;
+}
+div.also {
+	width: 100%;
+	left: -10px;
+	padding: 5px 10px 10px 10px;
+	background: #eee;
+}
+
+
+div.column {
+	-webkit-column-count: 4;
+	-moz-column-count: 4;
+	column-count: 4;
+	-webkit-column-gap: 15px;
+	-moz-column-gap: 15px;
+	column-gap: 15px;
+	-webkit-column-rule: 1px solid #ccc;
+	-moz-column-rule: 1px solid #ccc;
+	column-rule: 1px solid #ccc;
+}
+div.column3 {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+	-webkit-column-gap: 15px;
+	-moz-column-gap: 15px; 
+	column-gap: 15px;
+	-webkit-column-rule: 1px solid #ccc;
+	-moz-column-rule: 1px solid #ccc;
+	column-rule: 1px solid #ccc;
+}
