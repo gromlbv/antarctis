@@ -83,7 +83,7 @@ h2{
 }
 h3{
     color: #565455;
-    font-size: min(4vw, 24px);
+    font-size: min(5vw, 24px);
     font-weight: 500;
     word-break: break-word;
     text-align: left;
@@ -147,6 +147,7 @@ h3{
 }
 
 p{
+    font-size: 16px;
     color: #5F6970;
     font-weight: bold;
 }
@@ -323,6 +324,7 @@ td, input, select{
     color: #565455;
     width: 100%;
 }
+
 td{
     display: flex;
     padding: 15px;
@@ -576,12 +578,15 @@ input[type=submit]:disabled{
 .pdf-card > .heading{
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: baseline;
     flex-direction: row;
     gap: 5px;
 }
 .pdf-card > .heading > h3{
     font-weight: 600;
+}
+.pdf-card > .heading > p{
+    font-weight: 500;
 }
 .pdf-btn{
     display: flex;
@@ -616,9 +621,48 @@ img{
     transition: .1s;
     filter: brightness(1.5);
 }
+
 /*  КОНЕЦ Личный профиль  */
 @media only screen and (max-width: 620px) {
     .pdf-card-wr{
         flex-direction: column;
     }
 }
+
+
+
+/* Логин */
+
+.login-wr{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.login-wr label{
+    margin-top: 12px;
+
+    color: #35579C;
+    font-weight: 600;
+    font-size: min(6vw, 36px);
+}
+.login-wr input[type=text], input[type=email]{
+    padding: 15px;
+    
+    font-size: min(4vw, 18px);
+    border-radius: 15px;
+    border: 2px solid rgba(86, 84, 85, 0.25);
+}
+.contact-label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+.contact-label > h2{
+    font-size: min(5vw, 24px);
+    text-wrap: nowrap;
+}
+.login-wr .bottom-btn{
+    margin-top: 12px;
+}
+/* КОНЕЦ Логин */
