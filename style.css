@@ -147,7 +147,7 @@ h3{
 }
 
 p{
-    font-size: 16px;
+    font-size: min(4vw, 16px);
     color: #5F6970;
     font-weight: bold;
 }
@@ -449,11 +449,14 @@ td:last-child{
 }
 
 input[type=submit]{
-    background-color: #CDE1F0;
+    background-color: #138BD2;
     color: white;
     border-radius: 18px;
     height: 62px;
     margin-bottom: 35px;
+}
+input[type=submit]:hover{
+    cursor: pointer;
 }
 input[type=button], .button-back{
     color: #B4B4B4;
@@ -468,6 +471,9 @@ input[type=button], .button-back{
 }
 input[type=submit]:disabled{
     background-color: #CDE1F0;
+}
+input[type=submit]:disabled:hover{
+    cursor: not-allowed;
 }
 .button-back:hover, .more-param-wr:hover{
     transition: .1s;
@@ -631,8 +637,18 @@ img{
 
 
 
-/* Логин */
+/*  Логин  */
 
+
+.tip{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+}
+.tip p{
+    font-weight: 600;
+}
 .login-wr{
     display: flex;
     flex-direction: column;
@@ -665,4 +681,75 @@ img{
 .login-wr .bottom-btn{
     margin-top: 12px;
 }
-/* КОНЕЦ Логин */
+
+
+/*  КОНЕЦ Логин  */
+
+
+
+/*  СМС  */
+
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+#otp-form {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+#otp-form input {
+  border: none;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  max-width: 90px;
+  height: 140px;
+  border-radius: 16px;
+  border: 2px solid #D4D4D4;
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 500;
+  color: #565455;
+}
+#otp-form > input::-webkit-outer-spin-button,
+#otp-form > input::-webkit-inner-spin-button {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
+#otp-form input:focus-visible{
+    border: 2px solid #565455;
+}
+#otp-form input.filled {
+    border: 2px solid #b4b4b4;
+}
+
+.otp-error{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 100%;
+    border-radius: 18px;
+
+    background-color: #FD7979;
+}
+.otp-error > p{
+    color: white;
+    font-weight: 500;
+}
+
+
+/*  КОНЕЦ СМС  */
