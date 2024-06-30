@@ -45,10 +45,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 STRUCTURE
 *************************************************************************************/
 #pagewrap {
-	margin: 0 auto;
+	margin: 25px auto;
 	margin-right: 18vw;
     margin-left: 18vw;
     margin-bottom: 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 *{
@@ -373,7 +376,7 @@ tr{
 td, input, select{
     background-color: white;
     outline: #D4D4D4 2px solid;
-    font-size: 18px;
+    font-size: min(4vw, 18px);
     font-weight: 500;
 	text-align: left;
     color: #565455;
@@ -558,7 +561,7 @@ input[type=submit]:disabled{
         width: auto;
     }
     td{
-        width: 100%;
+        width: auto;
     }
 }
 
@@ -708,6 +711,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 .dot:hover {
 	cursor:pointer;
+    color: #3E62AC;
 }
 #error1{
     color:#138BD2;
@@ -811,7 +815,7 @@ td > input{
 	height: 100%;
 }
 td:last-child{
-	white-space: nowrap;
+	white-space: wrap;
 }
 tr:last-child{
 	white-space: wrap;

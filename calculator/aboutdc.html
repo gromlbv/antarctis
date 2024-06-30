@@ -72,151 +72,7 @@
 <style media="screen"></style><script src="./Расчет увлажнителей воздуха на ID-диаграмме онлайн _ AboutDC.ru_files/tag.js.Без названия" defer=""></script></head>
 <link rel="stylesheet" href="style.css">
 <body>
-    	<div id="pagewrap">
-    		<style>
-                header, header * {
-                    margin:0;
-                    padding:0;
-                    box-sizing:border-box;
-                }
-                #site_logo {
-                    margin:0;
-                    padding: 10px 20px 10px 20px;
-                    text-align:left;
-                }
-                #site_logo a#site_logo_link {
-                    font: 34px 'Cambria';
-                    color:#229;
-                    /*display: inline-block; */
-                    text-decoration: none;
-                }
-                #site_description {
-                    color: #fff;
-                }
-    @media only screen and (min-width:967px) {
-        nav{margin:0;}
-        nav ul{position:relative;/*left:-20px;*/background:#1f6fc1;margin:0;padding:0 10px;list-style:none;/*width:calc(100% + 40px);*/display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
-        nav ul li{float:left;padding:0;text-align:center;line-height:53px;position:relative}
-        /*nav ul li:first-child{margin-left:20px}*/
-        nav ul li a{float:left;display:block;padding:0 10px;text-align:center;color:#fff;text-decoration:none;position:relative;-webkit-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
-        nav ul li a:hover{background:#b52525;text-decoration:none;color:#fff;}
-        #menu__toggle {display:none;}
-    
-        .menu__item:hover .nav-item-dropdown-content {display:flex;top:53px;}
-        .menu__item:hover .nav-item-dropdown-content a {width:100%;line-height:20px;padding: 8px 30px 8px 20px;text-align:left;color:#000;white-space:nowrap;}
-    }
-    
-    @media only screen and (max-width:967px) {
-        #menu__toggle {display:none;opacity: 0;padding:0;}
-        #menu__toggle:checked ~ .menu__btn > span {  transform: rotate(45deg);}
-        #menu__toggle:checked ~ .menu__btn > span::before {  top: 0;  transform: rotate(0);}
-        #menu__toggle:checked ~ .menu__btn > span::after {  top: 0;  transform: rotate(90deg);}
-        #menu__toggle:checked ~ nav .menu__box {  visibility: visible;  left: 0; z-index:1000;}
-        .menu__btn {  /*display: flex;  align-items: center;  position: fixed;*/
-            /*top: 20px;  left: 20px;*/
-            display: block; float:left;
-            padding: 28px 15px 0 15px;
-            margin: 0px 10px 0 0;
-            width: 60px;  height: 60px;
-            cursor: pointer;  z-index: 1;
-        }
-        .menu__btn > span,
-        .menu__btn > span::before,
-        .menu__btn > span::after {
-          display: block;  position: absolute;
-          width: 26px;  height: 2px;
-          background-color: #616161;
-          transition-duration: .25s;
-           z-index:1000;
-        }
-        .menu__btn > span::before {  content: '';  top: -8px;}
-        .menu__btn > span::after {  content: '';  top: 8px;}
-        .menu__box {
-          display: block;  position: fixed;  visibility: hidden; 
-          top: 60px;  left: -100%;
-          width: 300px;  height: 100%;
-          margin: 0;  padding: 10px 0 0 0;
-          list-style: none;
-          background-color: #ECEFF1;  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-          transition-duration: .25s;
-        }
-        .menu__item a {
-          display: block;  padding: 12px 24px; width:100%;
-          color: #333;  font-family: 'Roboto', sans-serif;  font-size: 20px;  font-weight: 600;
-          text-decoration: none;
-          transition-duration: .25s;
-        }
-        .menu__item a:hover {  background-color: #CFD8DC;}
-    }
-    
-    @media only screen and (max-width:654px) {
-        header .logo img{margin-left:20px;}
-        .user-info {display:none;}
-        .div_logo {margin: 17px 0;}
-    }
-</style><style media="screen"></style>
 
-<h1>Расчет увлажнителей воздуха на ID-диаграмме онлайн</h1><style>
-	.soderjanie{background:#f4f4f4;margin:20px 0;padding:25px 20px;}
-	.soderjanie ul{margin:5px 0}
-	
-	.obuchenie{margin:30px 0;}
-</style><style media="screen"></style>
-<p>
-	<script language="javascript" type="text/javascript" src="./Расчет увлажнителей воздуха на ID-диаграмме онлайн _ AboutDC.ru_files/jquery.js.Без названия"></script>
-	<script language="javascript" type="text/javascript" src="./Расчет увлажнителей воздуха на ID-диаграмме онлайн _ AboutDC.ru_files/jquery.flot.js.Без названия"></script>
-
-	<style>
-	    input,button {
-            box-sizing: border-box;
-        }
-		input[
-            type="number"] {
-                height: 100%;
-            }
-		.dot {
-            border-bottom: 1px dotted black;
-            font-weight:normal;
-            font-size:smaller;
-            float:right;
-        }
-		.dot:hover {
-            cursor:pointer;
-        }
-		.bez_radio {
-            margin-left: 0;
-        }
-
-		table {
-            margin: 0 auto
-        };
-		table, tr, th, td {
-            border-collapse: collapse; border: solid #eee 1px;
-        }
-
-        .demo-container {
-        	box-sizing: border-box;
-        	width: 50vw;
-        	padding: 25px 30px 25px 15px;
-        	margin: 15px auto 30px auto;
-        	border: 2px solid #D4D4D4;
-            border-radius: 35px;
-        	background: white;
-            width: 100%;
-        }
-        
-        .demo-placeholder {
-        	background: #fff;
-        	background: url('/calc/logo-mkhwh-300x95.png') center repeat-y;
-        	background-size: contain;
-        	width: 100%;
-        	height: 100%;
-        	font-size: 14px;
-        	line-height: 1.2em;
-        }
-    
-    </style><style class="darkreader darkreader--sync" media="screen"></style>
-	
 <script>
 	    function copy_to_clipboard(){
             navigator.clipboard.writeText($("#copy_link").val())
@@ -502,10 +358,11 @@
     	recount_id();
     });
 </script>
+<div id="pagewrap">
     <div class="history-menu">
             <a href="http://antarctis.ru">Главная ></a>
             <a href="index.html">Подбор оборудования ></a>
-            Адсорбционный осушитель
+            Расчет увлажнителей
         </div>
         <div>
             <h1>Расчет увлажнителей воздуха</h1>
@@ -518,34 +375,34 @@
                     <span class="dot">Сбросить</span>
                 </div>
                 <table id="calc_table"><tbody>
-	            	<tr>
-	            		<td colspan="2">Минимальная температура</td>
-	            		<td><input class="sel bez_radio" type="number" id="tmin" value="-20" min="-100" max="100" step="1">°С</td>
-	            	</tr>
-	            	<tr>
-	            		<td colspan="2">Максимальная температура</td>
-	            		<td><input class="sel bez_radio" type="number" id="tmax" value="40" min="-100" max="100" step="1">°С</td>
-	            	</tr>
-	            	<tr>
-	            		<td colspan="2">Минимальное влагосодержание</td>
-	            		<td><input class="sel bez_radio" type="number" id="dmin" value="0" min="0" max="50" step="1">г/кг</td>
-	            	</tr>
-	            	<tr>
-	            		<td colspan="2">Максимальное влагосодержание</td>
-	            		<td><input class="sel bez_radio" type="number" id="dmax" value="50" min="0" max="100" step="1">г/кг</td>
-	            	</tr>
-	            </tbody></table>
+                	<tr>
+                		<td colspan="2">Минимальная температура</td>
+                		<td><input class="sel bez_radio" type="number" id="tmin" value="-20" min="-100" max="100" step="1">°С</td>
+                	</tr>
+                	<tr>
+                		<td colspan="2">Максимальная температура</td>
+                		<td><input class="sel bez_radio" type="number" id="tmax" value="40" min="-100" max="100" step="1">°С</td>
+                	</tr>
+                	<tr>
+                		<td colspan="2">Минимальное влагосодержание</td>
+                		<td><input class="sel bez_radio" type="number" id="dmin" value="0" min="0" max="50" step="1">г/кг</td>
+                	</tr>
+                	<tr>
+                		<td colspan="2">Максимальное влагосодержание</td>
+                		<td><input class="sel bez_radio" type="number" id="dmax" value="50" min="0" max="100" step="1">г/кг</td>
+                	</tr>
+                </tbody></table>
                 <h2>Тип ID-диаграммы</h2>
                 <table id="calc_table"><tbody>
-	            	<tr>
-	            		<td>Тип увлажнителя</td>
-	            		<td colspan="3"><input type="radio" id="ad" name="type" class="par" checked=""><label for="ad">Адиабатический</label>&nbsp;&nbsp;&nbsp;<input type="radio" id="el" name="type" class="par"><label for="el">Пароувлажнитель</label></td>
-	            	</tr>
-	            	<tr>
-	            		<td colspan="2">Расход воздуха</td>
-	            		<td><input type="number" id="G1" value="1000" class="par bez_radio" min="0" step="1">м3/ч</td>
-	            	</tr>
-	            </tbody></table>
+                	<tr>
+                		<td>Тип увлажнителя</td>
+                		<td colspan="3"><input type="radio" id="ad" name="type" class="par" checked=""><label for="ad">Адиабатический</label>&nbsp;&nbsp;&nbsp;<input type="radio" id="el" name="type" class="par"><label for="el">Пароувлажнитель</label></td>
+                	</tr>
+                	<tr>
+                		<td colspan="2">Расход воздуха</td>
+                		<td><input type="number" id="G1" value="1000" class="par bez_radio" min="0" step="1">м3/ч</td>
+                	</tr>
+                </tbody></table>
                 <h2>Параметры первой и второй точки</h2>
                 <table id="calc_table"><tbody>
                     <tr>
@@ -553,62 +410,61 @@
                         <td>Точка 1</td>
                         <td>Точка 2</td>
                     </tr>
-	            	<tr>
-	            		<td>Температура</td>
-	            		<td><input class="point1_status" id="t1_status" type="checkbox" value="c1" checked=""><input class="sel point1" type="number" id="t1" value="20" step="1">°С</td>
-	            		<td><input class="point2_status" id="t2_status" type="radio" name="radio_p2" checked=""> <input class="sel point2" type="number" id="t2" value="30" step="1">°С</td>
-	            	</tr>
-	            	<tr>
-	            		<td>Влажность</td>
-	            		<td><input class="point1_status" id="fi1_status" type="checkbox" value="c2" checked=""><input class="sel point1" type="number" id="fi1" value="50" min="0" step="1">%</td>
-	            		<td><input class="point2_status" id="fi2_status" type="radio" name="radio_p2"> <input class="sel point2" type="number" id="fi2" value="90" min="0" step="1">%</td>
-	            	</tr>
-	            	<tr>
-	            		<td>Влагосодержание</td>
-	            		<td><input class="point1_status" id="d1_status" type="checkbox" value="c0"><input class="sel point1" type="number" id="d1" value="" min="0" step="1">г/кг</td>
-	            		<td><input class="point2_status" id="d2_status" type="radio" name="radio_p2">   <input class="sel point2" type="number" id="d2" value="0" min="0" step="1">г/кг</td>
-	            	</tr>
-	            	<tr>
-	            		<td>Энтальпия</td>
-	            		<td><input class="point1_status" id="i1_status" type="checkbox" value="c0"><input class="sel point1" type="number" id="i1" value="" step="1">кДж/кг</td>
-	            		<td><input class="point2_status" id="i2_status" type="radio" name="radio_p2"> <input class="sel point2" type="number" id="i2" value="0" step="1">кДж/кг</td>
-	            	</tr>
-	            	<tr>
-	            		<td>Парц. давление</td>
-	            		<td><input class="point1_status" id="p1_status" type="checkbox" value="c0"><input class="sel point1" type="number" id="p1" value="" step="1">кПа</td>
-	            		<td><input class="point2_status" id="p2_status" type="radio" name="radio_p2">   <input class="sel point2" type="number" id="p2" value="0" min="0" step="0.1">кПа</td>
-	            	</tr>
-	            	<tr>
-	            		<td>Точка росы</td>
-	            		<td><input class="point1_status" id="tr1_status" type="checkbox" value="c0"><input class="sel point1" type="number" id="tr1" value="" step="1">°С</td>
-	            		<td><input class="point2_status" id="tr2_status" type="radio" name="radio_p2">   <input class="sel point2" type="number" id="tr2" value="0" step="1">°С</td>
-	            	</tr>
-	            	<tr>
-	            		<td colspan="2">Расход воды</td>
+                	<tr>
+                		<td>Температура</td>
+                		<td><input class="point1_status" id="t1_status" type="checkbox" value="c1" checked=""><input class="sel point1" type="number" id="t1" value="20" step="1">°С</td>
+                		<td><input class="point2_status" id="t2_status" type="radio" name="radio_p2" checked=""> <input class="sel point2" type="number" id="t2" value="30" step="1">°С</td>
+                	</tr>
+                	<tr>
+                		<td>Влажность</td>
+                		<td><input class="point1_status" id="fi1_status" type="checkbox" value="c2" checked=""><input class="sel point1" type="number" id="fi1" value="50" min="0" step="1">%</td>
+                		<td><input class="point2_status" id="fi2_status" type="radio" name="radio_p2"> <input class="sel point2" type="number" id="fi2" value="90" min="0" step="1">%</td>
+                	</tr>
+                	<tr>
+                		<td>Влагосодержание</td>
+                		<td><input class="point1_status" id="d1_status" type="checkbox" value="c0"><input class="sel point1" type="number" id="d1" value="" min="0" step="1">г/кг</td>
+                		<td><input class="point2_status" id="d2_status" type="radio" name="radio_p2">   <input class="sel point2" type="number" id="d2" value="0" min="0" step="1">г/кг</td>
+                	</tr>
+                	<tr>
+                		<td>Энтальпия</td>
+                		<td><input class="point1_status" id="i1_status" type="checkbox" value="c0"><input class="sel point1" type="number" id="i1" value="" step="1">кДж/кг</td>
+                		<td><input class="point2_status" id="i2_status" type="radio" name="radio_p2"> <input class="sel point2" type="number" id="i2" value="0" step="1">кДж/кг</td>
+                	</tr>
+                	<tr>
+                		<td>Парц. давление</td>
+                		<td><input class="point1_status" id="p1_status" type="checkbox" value="c0"><input class="sel point1" type="number" id="p1" value="" step="1">кПа</td>
+                		<td><input class="point2_status" id="p2_status" type="radio" name="radio_p2">   <input class="sel point2" type="number" id="p2" value="0" min="0" step="0.1">кПа</td>
+                	</tr>
+                	<tr>
+                		<td>Точка росы</td>
+                		<td><input class="point1_status" id="tr1_status" type="checkbox" value="c0"><input class="sel point1" type="number" id="tr1" value="" step="1">°С</td>
+                		<td><input class="point2_status" id="tr2_status" type="radio" name="radio_p2">   <input class="sel point2" type="number" id="tr2" value="0" step="1">°С</td>
+                	</tr>
+                	<tr>
+                		<td colspan="2">Расход воды</td>
                         <td></td>
-	            		<td><input class="point2_status" id="W2_status" type="radio" name="radio_p2">  <input class="sel point2" type="number" id="W2" value="0" min="0" step="1">кг/ч</td>
-	            	</tr>
-	            	<tr>
-	            		<td colspan="2">Потребляемая мощность</td>
+                		<td><input class="point2_status" id="W2_status" type="radio" name="radio_p2">  <input class="sel point2" type="number" id="W2" value="0" min="0" step="1">кг/ч</td>
+                	</tr>
+                	<tr>
+                		<td colspan="2">Потребляемая мощность</td>
                         <td></td>
-	            		<td><input class="point2_status" id="N2_status" type="radio" name="radio_p2"> <input class="sel point2" type="number" id="N2" value="0" min="0" step="1">кВт</td>
-	            	</tr>
-	            	<tr>
+                		<td><input class="point2_status" id="N2_status" type="radio" name="radio_p2"> <input class="sel point2" type="number" id="N2" value="0" min="0" step="1">кВт</td>
+                	</tr>
+                	<tr>
                         <td colspan="4" id="error1">! Невозможно увлажнить: влажность должна быть выше начальной</td>
-	            	</tr>
-	            </tbody></table>
-                <div class="demo-container">
-                    <div id="placeholder" class="demo-placeholder" style="padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 659px; height: 763px;" width="659" height="763"></canvas><div class="flot-text" style="position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84); --darkreader-inline-color: #b3aca2;" data-darkreader-inline-color=""><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; inset: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 744px; left: 22px;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 744px; left: 126px;">5</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 744px; left: 228px;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 744px; left: 332px;">15</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 744px; left: 437px;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 744px; left: 541px;">25</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 744px; left: 646px;">30</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; inset: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 487px; left: 13px;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 426px; left: 13px;">5</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 366px; left: 6px;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 305px; left: 6px;">15</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 244px; left: 6px;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 183px; left: 6px;">25</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 122px; left: 6px;">30</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 61px; left: 6px;">35</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 6px;">40</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 731px; left: 2px;">-20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 670px; left: 2px;">-15</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 609px; left: 2px;">-10</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 548px; left: 9px;">-5</div></div></div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 659px; height: 763px;" width="659" height="763"></canvas><div id="point1_label" style="position: absolute; left: 180px; top: 235px; color: red; --darkreader-inline-color: #ff1a1a;" data-darkreader-inline-color=""><b>т.1</b></div><div id="point2_label" style="position: absolute; left: 180px; top: 235px; color: blue; --darkreader-inline-color: #337dff;" data-darkreader-inline-color=""><b>т.2</b></div><div style="position: absolute; left: 114px; top: -8px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">10%</div><div style="position: absolute; left: 211px; top: -8px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">20%</div><div style="position: absolute; left: 309px; top: -8px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">30%</div><div style="position: absolute; left: 409px; top: -8px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">40%</div><div style="position: absolute; left: 510px; top: -8px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">50%</div><div style="position: absolute; left: 613px; top: -8px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">60%</div><div style="position: absolute; left: 656px; top: 27px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">70%</div><div style="position: absolute; left: 656px; top: 56px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">80%</div><div style="position: absolute; left: 656px; top: 82px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">90%</div><div style="position: absolute; left: 656px; top: 105px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">100%</div><div style="position: absolute; left: 143px; top: 669px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">0</div><div style="position: absolute; left: 173px; top: 593px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">10</div><div style="position: absolute; left: 204px; top: 517px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">20</div><div style="position: absolute; left: 234px; top: 442px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">30</div><div style="position: absolute; left: 275px; top: 382px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">40</div><div style="position: absolute; left: 347px; top: 367px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">50</div><div style="position: absolute; left: 388px; top: 307px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">60</div><div style="position: absolute; left: 460px; top: 293px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">70</div><div style="position: absolute; left: 532px; top: 278px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">80</div><div style="position: absolute; left: 573px; top: 220px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">90</div><div style="position: absolute; left: 645px; top: 206px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">100</div></div>
-                </div>
-                <div class="bottom-btn">
-                    <button class="button-back" onclick="history.back()"><img src="source/arrow-back.svg" alt="Назад" draggable="false"></button>
-                    <input type="submit" value="Продолжить">
-                </div>
-                
+                	</tr>
+                </tbody>
+            </table>
+            <div class="demo-container">
+                <div id="placeholder" class="demo-placeholder" style="padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 659px; height: 763px;" width="659" height="763"></canvas><div class="flot-text" style="position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84); --darkreader-inline-color: #b3aca2;" data-darkreader-inline-color=""><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; inset: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 744px; left: 22px;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 744px; left: 126px;">5</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 744px; left: 228px;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 744px; left: 332px;">15</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 744px; left: 437px;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 744px; left: 541px;">25</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 744px; left: 646px;">30</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; inset: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 487px; left: 13px;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 426px; left: 13px;">5</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 366px; left: 6px;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 305px; left: 6px;">15</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 244px; left: 6px;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 183px; left: 6px;">25</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 122px; left: 6px;">30</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 61px; left: 6px;">35</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 6px;">40</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 731px; left: 2px;">-20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 670px; left: 2px;">-15</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 609px; left: 2px;">-10</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 548px; left: 9px;">-5</div></div></div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 659px; height: 763px;" width="659" height="763"></canvas><div id="point1_label" style="position: absolute; left: 180px; top: 235px; color: red; --darkreader-inline-color: #ff1a1a;" data-darkreader-inline-color=""><b>т.1</b></div><div id="point2_label" style="position: absolute; left: 180px; top: 235px; color: blue; --darkreader-inline-color: #337dff;" data-darkreader-inline-color=""><b>т.2</b></div><div style="position: absolute; left: 114px; top: -8px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">10%</div><div style="position: absolute; left: 211px; top: -8px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">20%</div><div style="position: absolute; left: 309px; top: -8px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">30%</div><div style="position: absolute; left: 409px; top: -8px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">40%</div><div style="position: absolute; left: 510px; top: -8px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">50%</div><div style="position: absolute; left: 613px; top: -8px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">60%</div><div style="position: absolute; left: 656px; top: 27px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">70%</div><div style="position: absolute; left: 656px; top: 56px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">80%</div><div style="position: absolute; left: 656px; top: 82px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">90%</div><div style="position: absolute; left: 656px; top: 105px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">100%</div><div style="position: absolute; left: 143px; top: 669px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">0</div><div style="position: absolute; left: 173px; top: 593px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">10</div><div style="position: absolute; left: 204px; top: 517px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">20</div><div style="position: absolute; left: 234px; top: 442px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">30</div><div style="position: absolute; left: 275px; top: 382px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">40</div><div style="position: absolute; left: 347px; top: 367px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">50</div><div style="position: absolute; left: 388px; top: 307px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">60</div><div style="position: absolute; left: 460px; top: 293px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">70</div><div style="position: absolute; left: 532px; top: 278px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">80</div><div style="position: absolute; left: 573px; top: 220px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">90</div><div style="position: absolute; left: 645px; top: 206px; color: rgb(102, 102, 102); font-size: smaller; --darkreader-inline-color: #a8a095;" data-darkreader-inline-color="">100</div></div>
+            </div>
+            <div class="bottom-btn">
+                <button class="button-back" onclick="history.back()"><img src="source/arrow-back.svg" alt="Назад" draggable="false"></button>
+                <input type="submit" value="Продолжить">
+            </div>
             </div>
         </div>
-
-
+</div>
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6211185615965160" crossorigin="anonymous"></script>
 <!-- AboutDC_article_after_calc -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6211185615965160" data-ad-slot="1697303164" data-ad-format="auto" data-full-width-responsive="true"></ins>
