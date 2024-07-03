@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antarctis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-face.css">
+</head>
+<body>
+    <header>
+        <img src="source/antarctis_logo.svg" onclick="window.location.href = 'https://antarctis.ru'">
+        <div class="header-wr">
+            <div class="contacts">
+                +7 (495) 121-70-47
+                <a href="">info@antarctis.ru</a>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="history-menu">
+            <a href="http://antarctis.ru">Главная ></a>
+            <a href="index.html">Подбор оборудования ></a>
+            Личный профиль
+        </div>
+        <div class="tip">
+            <img src="source/info-tip.svg">
+            <p>Перед тем, как мы произведем расчет, заполните пожалуйста следующие данные.</p>
+        </div>
+        <div class="login-wr">
+            <label>Наименование компании</label>
+            <input type="text" name="company" placeholder="ООО “Ваша компания”">
+            <label>Название объекта</label>
+            <input type="text" name="company" placeholder="Введите название">
+            <label>Ваши данные</label>
+            <input type="text" name="company" placeholder="Фамилия">
+            <input type="text" name="company" placeholder="Имя">
+            <input type="text" name="company" placeholder="Отчество">
+            <label>Контактные данные</label>
+            <div class="contact-label">
+                <h2>Телефон</h2>
+                <input type="text" name="company" placeholder="+712345678910">
+            </div>
+            <div class="contact-label">
+                <h2>E-mail</h2>
+                <input type="email" name="company" placeholder="yourmail@example.com">
+            </div>
+            <div class="bottom-btn">
+                <button class="button-back" onclick="history.back()"><img src="source/arrow-back.svg" alt="Назад" draggable="false"></button>
+                <input type="submit" value="Продолжить">
+            </div>
+        </div>
+        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

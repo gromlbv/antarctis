@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antarctis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-face.css">
+</head>
+<body>
+    <header>
+        <img src="source/antarctis_logo.svg" onclick="window.location.href = 'https://antarctis.ru'">
+        <div class="header-wr">
+            <div class="contacts">
+                +7 (495) 121-70-47
+                <a href="">info@antarctis.ru</a>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="history-menu">
+            <a href="http://antarctis.ru">Главная ></a>
+            <a href="index.html">Подбор оборудования ></a>
+            Личный профиль
+        </div>
+        <div class="tip">
+            <img src="source/sms-tip.svg">
+            <p>Мы выслали вам СМС с четырехзначным кодом. Введите эти цифры в поле ниже.</p>
+        </div>
+        <section>
+            <form id="otp-form">
+              <input type="number" class="otp-input" maxlength="1" autocomplete="language">
+              <input type="number" class="otp-input" maxlength="1" autocomplete="language">
+              <input type="number" class="otp-input" maxlength="1" autocomplete="language">
+              <input type="number" class="otp-input" maxlength="1" autocomplete="language">
+            </form>
+            <div class="otp-error">
+                <img src="" alt="">
+                <p>Введенный код не подошел</p>
+            </div>
+        </section>
+        <div class="bottom-btn">
+            <button class="button-back" onclick="history.back()"><img src="source/arrow-back.svg" alt="Назад" draggable="false"></button>
+            <input class="continue" type="submit" id="verify-btn" value="Продолжить">
+        </div>
+        </div>
+        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
