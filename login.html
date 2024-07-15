@@ -29,21 +29,21 @@
         </div>
         <div class="login-wr">
             <label>Наименование компании</label>
-            <input type="text" name="company" placeholder="ООО “Ваша компания”">
+            <input type="text" name="company_name" placeholder="ООО “Ваша компания”">
             <label>Название объекта</label>
-            <input type="text" name="company" placeholder="Введите название">
+            <input type="text" name="facility_name" placeholder="Введите название">
             <label>Ваши данные</label>
-            <input type="text" name="company" placeholder="Фамилия">
-            <input type="text" name="company" placeholder="Имя">
-            <input type="text" name="company" placeholder="Отчество">
+            <input type="text" name="last_name" placeholder="Фамилия">
+            <input type="text" name="first_name" placeholder="Имя">
+            <input type="text" name="father_name" placeholder="Отчество">
             <label>Контактные данные</label>
             <div class="contact-label">
                 <h2>Телефон</h2>
-                <input type="text" name="company" placeholder="+712345678910">
+                <input type="text" name="phone" placeholder="+712345678910">
             </div>
             <div class="contact-label">
                 <h2>E-mail</h2>
-                <input type="email" name="company" placeholder="yourmail@example.com">
+                <input type="email" name="email" placeholder="yourmail@example.com">
             </div>
             <div class="bottom-btn">
                 <button class="button-back" onclick="history.back()"><img src="source/arrow-back.svg" alt="Назад" draggable="false"></button>
@@ -54,5 +54,34 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        const lwr = document.querySelector(".login-wr")
+        
+        const phone = lwr.querySelector("input[name=phone]")
+        const email = lwr.querySelector("input[name=email]")
+        const last_name = lwr.querySelector("input[name=last_name]")
+        const first_name = lwr.querySelector("input[name=first_name]")
+        const father_name = lwr.querySelector("input[name=father_name]")
+        const company_name = lwr.querySelector("input[name=company_name]")
+        const facility_name = lwr.querySelector("input[name=facility_name]")
+        const btn = document.querySelector(".bottom-btn > input[type=submit]")
+
+        btn.addEventListener('click', async e => {
+            fileds = {
+                "phone": phone.value,
+                "email": email.value,
+                "last_name": last_name.value,
+                "first_name": first_name.value,
+                "father_name": father_name.value == '' ? null : father_name.value,
+                "company_name": company_name.value,
+                "facility_name": facility_name.value
+            }
+            result = await fetch("/sms/newClient", {method: "POST", body: JSON.stringify(fileds)})
+            console.log(JSON.stringify(fileds));
+            if (result.status == 200) { // значит все доставилось успешно
+                window.location.href = 'sms.html'
+            }
+        })
+    </script>
 </body>
 </html>
