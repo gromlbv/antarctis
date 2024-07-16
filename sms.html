@@ -48,5 +48,21 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        const fileds = document.querySelectorAll("input.otp-input")
+        const btn = document.querySelector("input.continue")
+        btn.addEventListener("click", async e => {
+            code = ""
+            fileds.forEach(e => {code += e.value})
+            result = await fetch(`/sms/verifyCode?code=${code}`)
+            if (result.status) {}
+            switch (result.status) {
+                case 401: window.location.href = "/login" // пользователь не прошел первичную авторизацию
+                case 400: window.location.reload() // код не подошел
+                case 422: window.location.reload() // чтото не то с валидацией полей
+                case 200: window.location.href = "/profile" // код 200 значит авторизация успешна
+            }
+        })
+    </script>
 </body>
 </html>
