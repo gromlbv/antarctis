@@ -117,10 +117,11 @@
 
         // код обработки формы подходит для всех остальных форм, нужно только верно заполнить form_name и fields в обработчике
 
-        document.querySelector(".bottom-btn input").addEventListener("click", e => { 
+        document.querySelector(".bottom-btn input").addEventListener("click", async e => { 
             let fields = {} // нужно заполнить этот словарь данными из формы!!!
             const form_name = "conditioner"
-            result = send_form(form_name, fields)
+            result = await send_form(form_name, fields)
+            console.log(result);
             switch (result.status) {
                 case 401: // если пользователь не авторизован, данные формы сохраняются в память и происходит редирект на страницу авторизации
                     localStorage.setItem("form_to_send.fields", JSON.stringify(fields))
