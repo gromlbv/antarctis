@@ -2,6 +2,7 @@
 
 const main = async () => {
     let client = await fetch("/client")
+    if (client.status == 401) window.location.href = "/login"
     client = await client.json()
   
     document.querySelector(".client-name").innerText = client.name
