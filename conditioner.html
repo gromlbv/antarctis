@@ -114,7 +114,10 @@
     <script src="send_form.js"></script>
     <script src="script.js"></script>
     <script>
-        document.querySelector(".bottom-btn input").addEventListener("click", e => {
+
+        // код обработки формы подходит для всех остальных форм, нужно только верно заполнить form_name и fields в обработчике
+
+        document.querySelector(".bottom-btn input").addEventListener("click", e => { 
             let fields = {} // нужно заполнить этот словарь данными из формы!!!
             const form_name = "conditioner"
             result = send_form(form_name, fields)
