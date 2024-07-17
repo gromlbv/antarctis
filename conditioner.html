@@ -115,8 +115,16 @@
     <script src="script.js"></script>
     <script>
         document.querySelector(".bottom-btn input").addEventListener("click", e => {
-            fields = {} // нужно заполнить этот словарь данными из формы!!!
-            result = send_form("conditioner", fields)
+            let fields = {} // нужно заполнить этот словарь данными из формы!!!
+            const form_name = "conditioner"
+            result = send_form(form_name, fields)
+            switch (result.status) {
+                case 401: // если пользователь не авторизован, данные формы сохраняются в память и происходит редирект на страницу авторизации
+                    localStorage.setItem("form_to_send.fields", JSON.stringify(fields))
+                    localStorage.setItem("form_to_send.name", form_name)
+                    window.location.href = "/login"
+                case 200: window.location.href = "/profile" // перебрасывает на личную страницу
+            }
         })
     </script>
 </body>
