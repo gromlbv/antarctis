@@ -67,7 +67,7 @@
         const btn = document.querySelector(".bottom-btn > input[type=submit]")
 
         btn.addEventListener('click', async e => {
-            fileds = {
+            fields = {
                 "phone": phone.value,
                 "email": email.value,
                 "last_name": last_name.value,
@@ -81,9 +81,8 @@
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(fileds)
+                body: JSON.stringify(fields)
             })
-            console.log(JSON.stringify(fileds));
             if (result.status == 200) { // значит все доставилось успешно
                 window.location.href = 'sms.html'
             }

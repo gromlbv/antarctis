@@ -112,6 +112,13 @@
         </div>
     </div>
     <script src="jquery.min.js"></script>
+    <script src="send_form.js"></script>
     <script src="script.js"></script>
+    <script>
+        document.querySelector(".bottom-btn input").addEventListener("click", e => {
+            fields = {} // нужно заполнить этот словарь данными из формы!!!
+            result = send_form("conditioner", fields)
+        })
+    </script>
 </body>
 </html>
