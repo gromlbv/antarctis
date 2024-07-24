@@ -782,9 +782,46 @@ section {
 
 /*  3d  */
 
+.view-setting{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.view-btn{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+.view-btn > button{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    color: black;
+    background-color: transparent;
+    border: none;
+
+    font-size: 18px;
+    font-weight: Medium;
+    text-align: left;
+}
+.view-btn > button:hover{
+    transition: .1s;
+    cursor: pointer;
+    filter: contrast(0.2);
+}
+.view-btn > button > font{
+    margin-top: 2px;
+    font-size: 16px;
+    color: #565455;
+}
+.view-btn > button > img{
+    margin-top: -2px;
+}
 .etalon-1{
 
 }
 .etalon-10{
-
+    display: none;
 }

@@ -141,3 +141,9 @@ inputs.forEach((input, currentIndex) => {
 verifyBtn.addEventListener("click", () => {
   verifyOTP();
 });
+
+/*  3d  */
+
+$(".show-1").on("click",function() {
+  console.log("disfadsjfk")
+});
