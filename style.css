@@ -780,7 +780,10 @@ section {
     border: 1px solid;
 }
 
+
+
 /*  3d  */
+
 
 .view-setting{
     display: flex;
@@ -819,9 +822,15 @@ section {
 .view-btn > button > img{
     margin-top: -2px;
 }
-.etalon-1{
 
-}
-.etalon-10{
+.etalon-1{
     display: none;
+}
+.etalon-1, .etalon-10{
+    margin-top: -40px;
+}
+
+*[x-apple-data-detectors=true]{
+    color: inherit !important;
+    text-decoration: inherit !important;
 }
