@@ -132,6 +132,8 @@ h3{
     border-radius: 15px;
     background-color: #F3F8FC;
     outline: 2px solid #F3F8FC;
+
+    cursor: pointer;
 }
 .individual-wr > img{
     object-fit: fill;
@@ -239,6 +241,7 @@ p{
     background: #FFF;
 }
 .pop-up > button{
+    transition: .1s;
     display: flex;
     padding: 15px 25px;
     justify-content: left;
@@ -247,7 +250,7 @@ p{
     align-self: stretch;
 
     border-radius: 15px;
-    border: 2px solid #D4E1EB;
+    border: 1px solid #D4E1EB;
     background-color: white;
 
     cursor: pointer;
@@ -255,6 +258,8 @@ p{
 .pop-up > button:hover{
     transition: .3s;
     background-color: #D4E1EB;
+    border: 1px solid white;
+    scale: 0.99;
 }
 .pop-up > button:active{
     transition: .1s;
@@ -378,6 +383,9 @@ option:not(:checked) {
 select{
     border-radius: 33px;
     
+}
+td:last-child{
+    white-space: nowrap;
 }
 input::placeholder{
     color: #B3B2B2;
@@ -503,6 +511,7 @@ input[type=submit]:disabled:hover{
 @media only screen and (max-width: 1120px) {
     .settings-wr {
         flex-direction: column;
+        align-items: center;
     }
     .settings-wr > img{
         width: 50%;
@@ -833,4 +842,21 @@ section {
 *[x-apple-data-detectors=true]{
     color: inherit !important;
     text-decoration: inherit !important;
+}
+
+.flex-r{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+.flex-r > img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.flex-r > img:hover{
+    filter: contrast(0.3);
 }

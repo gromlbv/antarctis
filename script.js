@@ -10,6 +10,11 @@ $(function(){
     $(".fullscreen-absolute").fadeOut("300");
     $("body").css("overflow","auto");
   })
+  $(".flex-r > img").click(function(){
+    $(".muted-bg").css("z-index","-1");
+    $(".fullscreen-absolute").fadeOut("300");
+    $("body").css("overflow","auto");
+  })
 })
 
 // цвет для select option "Выбрать"
@@ -33,6 +38,9 @@ $(function(){
       .animate({borderRadius: 18}, 50, "linear");
   })
 })
+
+// pop-up
+
 
 
 function nextDisable(){
