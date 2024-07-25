@@ -1,4 +1,4 @@
-function chiller_1(){
+function chiller_1_submit(){
     let name = "chiller_1"
     let fields = {
         input1: $('input[name*="1-chiller-1"]').val(),
@@ -11,10 +11,10 @@ function chiller_1(){
     console.log(fields)
     send_form(name, fields);
 }
-$(".chiller-1-submit").on("click", chiller_1);
+$(".chiller-1-submit").on("click", chiller_1_submit);
 
-function chiller_1(){
-    let name = "chiller_1"
+function conditioner_submit(){
+    let name = "conditioner"
     let fields = {
         input1: $('input[name*="1-conditioner"]').val(),
         input2: $('input[name*="2-conditioner"]').val(),
@@ -28,7 +28,7 @@ function chiller_1(){
     console.log(fields)
     send_form(name, fields);
 }
-$(".conditioner-submit").on("click", chiller_1);
+$(".conditioner-submit").on("click", conditioner_submit);
 
 
 const send_form = async (name, fields) => {
