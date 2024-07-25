@@ -24,7 +24,7 @@
             Чиллер по холоду и теплопроизводительности
         </div>
         <div>
-            <h1>Подбор чиллера «ЭРА» по холоду</h1>
+            <h1>Подбор чиллера «ЭРА» через объем и время</h1>
             <div class="h1-line"></div>
         </div>
         <div class="settings-wr">
@@ -34,14 +34,27 @@
                 <table>
                     <tbody>
                         <tr>
-                          <td>Холодо-производительность</td>
-                          <td><input type="number" placeholder="От X до Y" min="1">кВт</td></tr>
+                          <td>Объем охлаждаемого вещ-ва</td>
+                          <td><input name="1-chiller-1" type="number" placeholder="От X до Y" min="1">Т</td></tr>
                         <tr>
-                            <td>Температура на выходе из чиллера</td>
-                            <td><input type="number" placeholder="От 5 до 25" min="5" max="25">°C</td></tr>
+                            <td>Время охлаждения</td>
+                            <td><input name="2-chiller-1" type="number" placeholder="От 5 до 20" min="5" max="20">часов</td></tr>
+                        <tr>
+                            <td>Температура начальная</td>
+                            <td><input name="3-chiller-1" type="number" placeholder="От 5 до 20" min="5" max="20">°C</td></tr>
+                        <tr>
+                            <td>Температура конечная</td>
+                            <td><input name="4-chiller-1" type="number" placeholder="От 5 до 20" min="5" max="20">°C</td></tr>
+                        <tr>
+                            <td>Тип охлаждаемого вещества</td>
+                            <td><select name="5-chiller-1" id="capacitor" name="capacitor">
+                                <option disabled selected value style="display:none;">Выбрать</option>
+                                <option value="0">Вода</option>
+                                <option value="1">Этиленгликоль</option>
+                              </select></td></tr>
                         <tr>
                             <td>Выносной конденсатор </td>
-                            <td><select id="capacitor" name="capacitor">
+                            <td><select name="6-chiller-1" id="capacitor" name="capacitor">
                                 <option disabled selected value style="display:none;">Выбрать</option>
                                 <option value="0">Есть</option>
                                 <option value="1">Отсутсвует</option>
@@ -50,7 +63,7 @@
                 </table>
                 <div class="bottom-btn">
                     <button class="button-back" onclick="history.back()"><img src="source/arrow-back.svg" alt="Назад" draggable="false"></button>
-                    <input type="submit" value="Продолжить">
+                    <input class="chiller-1" type="submit" value="Продолжить">
                 </div>
                 
             </div>
@@ -58,5 +71,6 @@
     </div>
     <script src="jquery.min.js"></script>
     <script src="script.js"></script>
+    <script src="send_form.js"></script>
 </body>
 </html>
