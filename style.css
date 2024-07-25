@@ -17,11 +17,13 @@ header{
     padding-top: 25px;
     padding-bottom: 15px;
     margin-bottom: 35px;
+    height: 45px;
 }
 .header-wr{
-    display: inherit;
+    display: flex;
     flex-direction: row;
-    gap: 35px;
+    align-items: center;
+    gap: 12px;
 }
 .header-wr > .request{
     padding: 0 15px;
@@ -35,16 +37,58 @@ header{
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-weight: 600;
+    justify-content: center;
+    
+    padding: 0 15px;
+    
+    border: 1px solid #D4D4D4;
+    border-radius: 12px;
+    
+    height: 100%;
 }
-.header-wr > .contacts > a{
-    font-weight: 500;
-    font-size: 14px;
-    color: #565455;
-    text-decoration: none;
-}
-header > img{
+.header-wr > a{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 1px solid #D4D4D4;
+    border-radius: 12px;
+
+    height: 100%;
+    width: 45px;
     cursor: pointer;
+}
+.header-wr > a:hover{
+    transition: .1s;
+    border: 1px solid #CDE1F0;
+    
+}
+.header-wr > a:hover > img{
+    filter: contrast(0.2);
+}
+header img{
+    cursor: pointer;
+}
+
+.header-login{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 25px;
+    height: 100%;
+
+    border: 0;
+    border-radius: 15px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    color: white;
+    background-color: #138BD2;
+}
+.header-login:hover{
+    filter:saturate(2);
 }
 
 /*  КОНЕЦ Header  */
