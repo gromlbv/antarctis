@@ -12,18 +12,20 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 15vw;
-    margin-left: 15vw;
+    align-items: center;
+
+    height: 45px;
+
+    margin: 0 15vw 35px 15vw;
     padding-top: 25px;
     padding-bottom: 15px;
-    margin-bottom: 35px;
-    height: 45px;
 }
 .header-wr{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 12px;
+    height: 100%;
 }
 .header-wr > .request{
     padding: 0 15px;
@@ -62,7 +64,6 @@ header{
 .header-wr > a:hover{
     transition: .1s;
     border: 1px solid #CDE1F0;
-    
 }
 .header-wr > a:hover > img{
     filter: contrast(0.2);
@@ -71,7 +72,7 @@ header img{
     cursor: pointer;
 }
 
-.header-login{
+.header-login, .header-login-phone{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -86,14 +87,31 @@ header img{
 
     color: white;
     background-color: #138BD2;
+
+    cursor: pointer;
 }
 .header-login:hover{
     filter:saturate(2);
 }
+.header-login-phone{
+    display: none;
+
+    width: 45px;
+    padding: 2px 0 0 0;
+}
+.header-login-phone > img{
+    scale: 0.9;
+}
+
 
 /*  КОНЕЦ Header  */
 
+
+
+
 /*  Первая страничка  */
+
+
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -216,33 +234,7 @@ p{
 
     cursor: pointer;
 }
-@media only screen and (max-width: 1420px) {
-    .individual-wr{
-        width: 36%;
-    }
-}
 
-@media only screen and (max-width: 470px) {
-    header{
-        justify-content: center;
-    }
-    .header-wr{
-        display: none;
-    }
-    .equipment-wr{
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
-    .individual-wr{
-        width: 100%;
-        padding: 25px 0;
-        margin: 0 25px;
-        max-width: 300px;
-    }
-    .more-btn{
-        padding: 8px 16px;
-    }
-}
 
 
 /*  - КОНЕЦ Компонент для оборудования  */ 
@@ -551,28 +543,15 @@ input[type=submit]:disabled:hover{
 
 /*  КОНЕЦ chiller-1-1  */
 
-
-@media only screen and (max-width: 1120px) {
-    .settings-wr {
-        flex-direction: column;
-        align-items: center;
-    }
-    .settings-wr > img{
-        width: 50%;
-    }
-    .parametrs-wr{
-        min-width: 0;
-        width: 100%;
-    }
-    tbody{
-        width: auto;
-    }
-    td{
-        width: 100%;
+@media only screen and (max-width: 1420px) {
+    .individual-wr{
+        width: 36%;
     }
 }
-
 @media only screen and (max-width: 695px) {
+    header{
+        margin: 0 5vw 35px 5vw;
+    }
     .wrapper{
         margin-left: 5vw;
         margin-right: 5vw;
@@ -602,11 +581,69 @@ input[type=submit]:disabled:hover{
     }
 }
 
+
+@media only screen and (max-width: 1120px) {
+    .settings-wr {
+        flex-direction: column;
+        align-items: center;
+    }
+    .settings-wr > img{
+        width: 50%;
+    }
+    .parametrs-wr{
+        min-width: 0;
+        width: 100%;
+    }
+    tbody{
+        width: auto;
+    }
+    td{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 620px) {
+    .pdf-card-wr{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 520px) {
+    header{
+        height: 55px;
+        justify-content: space-between;
+    }
+    header > img{
+        height: 45px;
+    }
+    .header-wr{
+        display: none;
+    }
+    .header-login-phone{
+        display: inline;
+        width: 55px;
+        border-radius: 18px;
+    }
+}
+@media only screen and (max-width: 470px) {
+    .equipment-wr{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .individual-wr{
+        width: 100%;
+        padding: 25px 0;
+        margin: 0 25px;
+        max-width: 300px;
+    }
+    .more-btn{
+        padding: 8px 16px;
+    }
+}
 @media only screen and (max-width: 290px) {
     td {
         margin-right: -225px;
     }
 }
+
 
 
 
@@ -688,11 +725,7 @@ img{
 }
 
 /*  КОНЕЦ Личный профиль  */
-@media only screen and (max-width: 620px) {
-    .pdf-card-wr{
-        flex-direction: column;
-    }
-}
+
 
 
 
@@ -903,4 +936,10 @@ section {
 }
 .flex-r > img:hover{
     filter: contrast(0.3);
+}
+
+.viewer-3d{
+    margin-top: -40px;
+    width: 100%;
+    height: 50vh;
 }
