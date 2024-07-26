@@ -581,9 +581,8 @@ input[type=submit]:disabled:hover{
     }
 }
 
-
 @media only screen and (max-width: 1120px) {
-    .settings-wr {
+    .settings-wr{
         flex-direction: column;
         align-items: center;
     }
