@@ -119,7 +119,7 @@ $ (function() {
         ide2=e2.getAttribute("id").replace('_status','');
         idi1=document.getElementById(ide1).value;
         idi2=document.getElementById(ide2).value;
-        $.post('/calc/calc-id-diagram-humi.php', {ide1 : ide1, ide2 : ide2, idi1 : idi1, idi2 : idi2, ajax : 1}, function(ret){
+        $.post('https://app.antarctis.ru/calculate', {ide1 : ide1, ide2 : ide2, idi1 : idi1, idi2 : idi2, ajax : 1}, function(ret){
             ret1=ret.split("|");
             $('#t1').val(ret1[0]);  t1=ret1[0];
             $('#fi1').val(ret1[1]);
@@ -133,7 +133,7 @@ $ (function() {
             ide2=e2.getAttribute("id").replace('_status','');
             idi2=document.getElementById(ide2).value;
             if ($("#ad").is(':checked')==true) type=1; else type=0;
-            $.post('/calc/calc-id-diagram-humi.php', {t1 : t1, d1 : d1, i1 : i1, G1 : $("#G1").val(), ide2 : ide2, idi2 : idi2, type: type, proc : 'humi', ajax : 2}, function(ret){
+            $.post('https://app.antarctis.ru/calculate', {t1 : t1, d1 : d1, i1 : i1, G1 : $("#G1").val(), ide2 : ide2, idi2 : idi2, type: type, proc : 'humi', ajax : 2}, function(ret){
                 ret1=ret.split("|");
                 $('#t2').val(ret1[0]);  t2=ret1[0];
                 $('#fi2').val(ret1[1]);
