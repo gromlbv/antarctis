@@ -38,3 +38,27 @@ $(function(){
       .animate({borderRadius: 18}, 50, "linear");
   })
 })
+$( ".header-wr > .hover" ).hover(
+  function() {
+      $(".header-wr > .hover > div").css("display","flex");
+      $(".header-wr > .hover").css("padding","0 18px");
+      if ($( document ).width() < 820){
+        $(".header-login").css("display","none");
+        $(".header-wr > .hover").css("width","100%");
+      } 
+      else{
+        $(".header-wr > .hover").css("width","initial");
+      }
+  }, function() {
+    if ($( document ).width() < 820){
+      $(".header-login").css("display","flex");
+    } 
+    $(".header-wr > .hover > div").css("display","none");
+    $(".header-wr > .hover").css("padding","0px");
+    $(".header-wr > .hover").css("width","45px");
+  }
+);
+
+$(".header-login").click(function(){
+  window.location.href = "login.html"
+})

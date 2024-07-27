@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antarctis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-face.css">
+</head>
+<body>
+    <header>
+        <img src="source/antarctis_logo.svg" onclick="window.location.href = 'https://antarctis.ru'">
+        <div class="header-wr">
+            <a class="tel hover" href="tel:+74951217047" draggable="false">
+                <img src="source/header-phone.svg"> 
+                <div>+7 (495) 121-70-47</div>
+            </a> 
+            <a class="mail" href="mailto:mail@info@antarctis.ru">
+                <img src="source/header-mail.svg" draggable="false">
+            </a>
+            <button class="header-login">Вход в аккаунт</button>
+        </div>
+        <button class="header-login-phone">
+            <img src="source/login-btn.svg" draggable="false">
+        </button>
+    </header>
+    <div class="wrapper">
+        <div class="history-menu">
+            <a href="http://antarctis.ru">Главная ></a>
+            <a href="/">Подбор оборудования ></a>
+            Личный профиль
+        </div>
+        <div class="tip">
+            <img src="source/info-tip.svg">
+            <p>Перед тем, как мы произведем расчет, заполните пожалуйста следующие данные.</p>
+        </div>
+        <div class="login-wr margin-top-12px-child">
+            <label>Наименование компании</label>
+            <input type="text" name="company_name" placeholder="ООО “Ваша компания”">
+            <label>Название объекта</label>
+            <input type="text" name="facility_name" placeholder="Введите название">
+            <label>Ваши данные</label>
+            <input type="text" name="last_name" placeholder="Фамилия">
+            <input type="text" name="first_name" placeholder="Имя">
+            <input type="text" name="father_name" placeholder="Отчество">
+            <label>Контактные данные</label>
+            <div class="contact-label">
+                <h2>Телефон</h2>
+                <input type="text" name="phone" placeholder="+712345678910">
+            </div>
+            <div class="contact-label">
+                <h2>E-mail</h2>
+                <input type="email" name="email" placeholder="yourmail@example.com">
+            </div>
+            <div class="bottom-btn margin-top-12px">
+                <button class="button-back" onclick="history.back()"><img src="source/arrow-back.svg" alt="Назад" draggable="false"></button>
+                <input type="submit" value="Продолжить">
+            </div>
+        </div>
+        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const lwr = document.querySelector(".login-wr")
+        
+        const phone = lwr.querySelector("input[name=phone]")
+        const email = lwr.querySelector("input[name=email]")
+        const last_name = lwr.querySelector("input[name=last_name]")
+        const first_name = lwr.querySelector("input[name=first_name]")
+        const father_name = lwr.querySelector("input[name=father_name]")
+        const company_name = lwr.querySelector("input[name=company_name]")
+        const facility_name = lwr.querySelector("input[name=facility_name]")
+        const btn = document.querySelector(".bottom-btn > input[type=submit]")
+
+        btn.addEventListener('click', async e => {
+            fields = {
+                "phone": phone.value,
+                "email": email.value,
+                "last_name": last_name.value,
+                "first_name": first_name.value,
+                "father_name": father_name.value == '' ? null : father_name.value,
+                "company_name": company_name.value,
+                "facility_name": facility_name.value
+            }
+            result = await fetch("/sms/newClient", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(fields)
+            })
+            if (result.status == 200) { // значит все доставилось успешно
+                window.location.href = 'sms.html'
+            }
+        })
+    </script>
+</body>
+</html>

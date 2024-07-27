@@ -11,8 +11,9 @@
     <header>
         <img src="source/antarctis_logo.svg" onclick="window.location.href = 'https://antarctis.ru'">
         <div class="header-wr">
-            <a class="tel" href="tel:+74951217047" draggable="false">
-                <img src="source/header-phone.svg">
+            <a class="tel hover" href="tel:+74951217047" draggable="false">
+                <img src="source/header-phone.svg"> 
+                <div>+7 (495) 121-70-47</div>
             </a> 
             <a class="mail" href="mailto:mail@info@antarctis.ru">
                 <img src="source/header-mail.svg" draggable="false">
@@ -33,66 +34,21 @@
             <img src="source/info-tip.svg">
             <p>Перед тем, как мы произведем расчет, заполните пожалуйста следующие данные.</p>
         </div>
-        <div class="login-wr">
-            <label>Наименование компании</label>
-            <input type="text" name="company_name" placeholder="ООО “Ваша компания”">
-            <label>Название объекта</label>
-            <input type="text" name="facility_name" placeholder="Введите название">
-            <label>Ваши данные</label>
-            <input type="text" name="last_name" placeholder="Фамилия">
-            <input type="text" name="first_name" placeholder="Имя">
-            <input type="text" name="father_name" placeholder="Отчество">
-            <label>Контактные данные</label>
-            <div class="contact-label">
-                <h2>Телефон</h2>
-                <input type="text" name="phone" placeholder="+712345678910">
-            </div>
-            <div class="contact-label">
-                <h2>E-mail</h2>
-                <input type="email" name="email" placeholder="yourmail@example.com">
-            </div>
+        <div class="login-wr gap25">
+            <label>Вход в личный кабинет</label>
+            <input class="tel-mask" type="tel" name="company_name" placeholder="+7 (___) ___-__-__">
             <div class="bottom-btn">
                 <button class="button-back" onclick="history.back()"><img src="source/arrow-back.svg" alt="Назад" draggable="false"></button>
-                <input type="submit" value="Продолжить">
+                <input type="submit" value="Получить СМС">
+            </div>
+            <div class="sign-up-wr">
+                Впервые на сайте? - 
+                <a href="sign-up.html"> создать профиль компании</a>
             </div>
         </div>
-        
     </div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
-    <script>
-        const lwr = document.querySelector(".login-wr")
-        
-        const phone = lwr.querySelector("input[name=phone]")
-        const email = lwr.querySelector("input[name=email]")
-        const last_name = lwr.querySelector("input[name=last_name]")
-        const first_name = lwr.querySelector("input[name=first_name]")
-        const father_name = lwr.querySelector("input[name=father_name]")
-        const company_name = lwr.querySelector("input[name=company_name]")
-        const facility_name = lwr.querySelector("input[name=facility_name]")
-        const btn = document.querySelector(".bottom-btn > input[type=submit]")
-
-        btn.addEventListener('click', async e => {
-            fields = {
-                "phone": phone.value,
-                "email": email.value,
-                "last_name": last_name.value,
-                "first_name": first_name.value,
-                "father_name": father_name.value == '' ? null : father_name.value,
-                "company_name": company_name.value,
-                "facility_name": facility_name.value
-            }
-            result = await fetch("/sms/newClient", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(fields)
-            })
-            if (result.status == 200) { // значит все доставилось успешно
-                window.location.href = 'sms.html'
-            }
-        })
-    </script>
 </body>
 </html>
