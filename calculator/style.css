@@ -388,6 +388,9 @@ td{
     padding: 15px;
     align-items: center;
 }
+td:nth-child(1){
+    text-align: right;
+}
 input, select{
     width: 100%;
     padding: -15px;
@@ -448,6 +451,11 @@ tr:first-of-type td:last-of-type{
 }
 td:last-child{
     text-align: right;
+    white-space: nowrap;
+}
+td:nth-child(2){
+    text-align: right;
+    white-space: nowrap;
 }
 /*  - КОНЕЦ Table  */
 
@@ -714,7 +722,27 @@ input[type="checkbox"], input[type="radio"] {
     color: #3E62AC;
 }
 #error1{
-    color:#138BD2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: #F8F3D6;
+    color: #8F6F36;
+    padding: 18px;
+    font-weight: 600;
+    font-size: 18px;
+
+    border: 2px solid #D3CCB5;
+    border-radius: 18px;
+}
+#error1 > div > font{
+    font-weight: 500;
+}
+#error1 > img{
+    cursor: pointer;
+}
+#error1 > img:hover{
+    filter: contrast(0.2);
 }
 /*  - КОНЕЦ Table  */
 
@@ -813,12 +841,6 @@ table tr:hover td > input{
 */
 td > input{
 	height: 100%;
-}
-td:last-child{
-	white-space: wrap;
-}
-tr:last-child{
-	white-space: wrap;
 }
 table.left td { text-align: left; }
 table tr td.nolink a, table tr th.nolink a {

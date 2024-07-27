@@ -1,5 +1,7 @@
 
-
+$("#error1 > img").click(function(){
+    $("#error1").css("display","none");
+})
 function update_link(){
     	        link="";
     if ($('#t1_status').is(':checked'))  link+="&t1="+$("#t1").val();
