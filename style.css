@@ -378,7 +378,6 @@ td{
     align-items: center;
 }
 input, select{
-    width: 100%;
     padding: -15px;
     box-sizing: border-box;
     outline: none;
