@@ -457,6 +457,7 @@ td:nth-child(2){
     text-align: right;
     white-space: nowrap;
 }
+
 /*  - КОНЕЦ Table  */
 
 
@@ -565,12 +566,6 @@ input[type=submit]:disabled{
         min-width: 0;
         width: 100%;
     }
-    tbody{
-        width: auto;
-    }
-    td{
-        width: auto;
-    }
 }
 
 @media only screen and (max-width: 695px) {
@@ -580,9 +575,6 @@ input[type=submit]:disabled{
     }
     .settings-wr > img{
         max-width: inherit;
-    }
-    tr{
-        flex-direction: column;
     }
     tr:last-of-type td:first-of-type {
         border-bottom-left-radius: 0px;
@@ -949,4 +941,8 @@ div.column3 {
 	-webkit-column-rule: 1px solid #ccc;
 	-moz-column-rule: 1px solid #ccc;
 	column-rule: 1px solid #ccc;
+}
+
+#calc_table{
+
 }
