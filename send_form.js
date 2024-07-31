@@ -16,14 +16,14 @@ $(".chiller-1-submit").on("click", chiller_1_submit);
 function conditioner_submit(){
     let name = "conditioner"
     let fields = {
-        input1: $('input[name*="1-conditioner"]').val(),
-        input2: $('input[name*="2-conditioner"]').val(),
-        input3: $('input[name*="3-conditioner"]').val(),
-        input4: $('select[name*="4-conditioner"]').val(),
-        input5: $('select[name*="5-conditioner"]').val(),
-        input6: $('select[name*="6-conditioner"]').val(),
-        input7: $('select[name*="7-conditioner"]').val(),
-        input8: $('input[name*="8-conditioner"]').val(),
+        Теплоприток_от_оборудования: $('input[name*="1-conditioner"]').val(),
+        Теплоприток_от_отопления: $('input[name*="2-conditioner"]').val(),
+        Теплоприток_от_вентиляции: $('input[name*="3-conditioner"]').val(),
+        Наличие_увлажнителя: $('select[name*="4-conditioner"]').val(),
+        Направление_подачи_воздуха: $('select[name*="5-conditioner"]').val(),
+        Тип_модели_кондиционера: $('select[name*="6-conditioner"]').val(),
+        Зимний_комплект: $('select[name*="7-conditioner"]').val(),
+        Протокол_сетевого_взаимодействия: $('input[name*="8-conditioner"]').val(),
     }
     console.log(fields)
     send_form(name, fields);

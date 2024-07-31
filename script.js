@@ -62,3 +62,18 @@ $( ".header-wr > .hover" ).hover(
 $(".header-login").click(function(){
   window.location.href = "login.html"
 })
+
+let debug_3d_select = 0;
+
+$(".ar-debug-btn").click(function(){
+  if(debug_3d_select == 0){
+    $(".hidden-3d").css("display","flex");
+    $(".visible-debug").css("display","none");
+    debug_3d_select = 1;
+  }
+  else if(debug_3d_select == 1){
+    $(".hidden-3d").css("display","none");
+    $(".visible-debug").css("display","flex");
+    debug_3d_select = 0;
+  }
+})

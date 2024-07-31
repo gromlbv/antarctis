@@ -250,8 +250,41 @@ p{
 }
 
 
-
 /*  - КОНЕЦ Компонент для оборудования  */ 
+
+.debug{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 35px;
+}
+.debug > button{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 60px;
+
+    border: none;
+}
+.debug > button > font{
+    font-size: 28px;
+    color: #565455;
+    margin-bottom: -1px;
+    position: absolute;
+    right: 25px;
+}
+.hidden-3d{
+    display: none;
+}
+.hidden-3d-wr{
+    margin-top: -15px;
+}
 
 /*  - Всплывающее окно чиллер  */ 
 
