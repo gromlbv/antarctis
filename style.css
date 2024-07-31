@@ -2,6 +2,10 @@
     font-family: "Gilroy";
 }
 body{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 }
@@ -15,6 +19,7 @@ header{
     align-items: center;
 
     height: 45px;
+    max-width: 1400px;
 
     margin: 0 15vw 35px 15vw;
     padding-top: 25px;
@@ -130,6 +135,8 @@ header img{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    
+    max-width: 1400px;
 
     margin-right: 15vw;
     margin-left: 15vw;
@@ -195,6 +202,7 @@ h3{
 /*  - Компонент для оборудования  */ 
 
 .individual-wr{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -228,9 +236,12 @@ h3{
 }
 
 p{
+    text-align: center;
+    font-weight: bold;
     font-size: min(4vw, 16px);
     color: #5F6970;
-    font-weight: bold;
+
+    margin: 0;
 }
 .more-btn{
     display: flex;
@@ -279,7 +290,7 @@ p{
     position: absolute;
     right: 25px;
 }
-.hidden-3d{
+.hidden-3d .debug{
     display: none;
 }
 .hidden-3d-wr{
@@ -1030,3 +1041,7 @@ section {
 }
 
 
+
+.hidden{
+    display: none;
+}

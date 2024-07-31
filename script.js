@@ -63,8 +63,9 @@ $(".header-login").click(function(){
   window.location.href = "login.html"
 })
 
+$(".hidden-3d").css("display","none");
+$(".visible-debug").css("display","flex");
 let debug_3d_select = 0;
-
 $(".ar-debug-btn").click(function(){
   if(debug_3d_select == 0){
     $(".hidden-3d").css("display","flex");
