@@ -116,8 +116,8 @@
             $.post('https://app.antarctis.ru/calculate', {
                 ide1 : ide1, 
                 ide2 : ide2, 
-                idi1 : parseFloat(idi1), 
-                idi2 : parseFloat(idi2), 
+                idi1 : idi1, 
+                idi2 : idi2, 
                 ajax : 1
             }, function(ret){
                 ret1=ret.split("|");
@@ -135,13 +135,13 @@
 
                 if ($("#ad").is(':checked')==true) type=1; else type=0;
                 $.post('https://app.antarctis.ru/calculate', {
-                    t1 : parseFloat(t1), 
-                    d1 : parseFloat(d1), 
-                    i1 : parseFloat(i1), 
-                    G1 : parseFloat($("#G1").val()), 
+                    t1 : t1, 
+                    d1 : d1, 
+                    i1 : i1, 
+                    G1 : $("#G1").val(), 
                     ide2 : ide2, 
-                    idi2 : parseFloat(idi2), 
-                    type: parseInt(type), 
+                    idi2 : idi2, 
+                    type: type, 
                     proc : 'humi', 
                     ajax : 2
                 }, function(ret){
@@ -165,7 +165,6 @@
                     $('#error1').text(ret1[8]);
                 });
             });
-            update_link();
     	}
 
 		function id_draw() {
@@ -223,7 +222,6 @@
             });
 
             label_draw();
-            update_link();
     	}
 
 		function label_draw() {
