@@ -46,8 +46,8 @@ STRUCTURE
 *************************************************************************************/
 #pagewrap {
 	margin: 25px auto;
-	margin-right: 18vw;
-    margin-left: 18vw;
+	margin-right: 15vw;
+    margin-left: 15vw;
     margin-bottom: 5vw;
     display: flex;
     flex-direction: column;
@@ -67,14 +67,22 @@ body{
 header{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 15px;
-    margin-bottom: 35px;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 45px;
+    max-width: 1400px;
+
+    margin: 0 15vw 35px 15vw;
+    padding-top: 25px;
+    padding-bottom: 15px;
 }
 .header-wr{
-    display: inherit;
+    display: flex;
     flex-direction: row;
-    gap: 35px;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
 }
 .header-wr > .request{
     padding: 0 15px;
@@ -88,17 +96,84 @@ header{
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-weight: 600;
+    justify-content: center;
+    
+    padding: 0 15px;
+    
+    border: 1px solid #D4D4D4;
+    border-radius: 12px;
+    
+    height: 100%;
 }
-.header-wr > .contacts > a{
-    font-weight: 500;
-    font-size: 14px;
-    color: #565455;
-    text-decoration: none;
-}
-header > img{
+.header-wr > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #D4D4D4;
+    border-radius: 12px;
+
+    height: 100%;
+    width: 45px;
     cursor: pointer;
 }
+
+.header-wr > .hover{
+    transition: 0.1s;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 0 0;
+    width: 45px;
+
+    color: black;
+    text-decoration: none;
+}
+.header-wr > .hover > div{
+    display: none;
+}
+.header-wr > a:hover{
+    transition: .1s;
+    border: 1px solid #CDE1F0;
+}
+.header-wr > a:hover > img{
+    filter: contrast(0.2);
+}
+header img{
+    cursor: pointer;
+}
+
+.header-login, .header-login-phone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 25px;
+    height: 100%;
+
+    border: 0;
+    border-radius: 15px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    color: white;
+    background-color: #138BD2;
+
+    cursor: pointer;
+}
+.header-login:hover{
+    filter:saturate(2);
+}
+.header-login-phone{
+    display: none;
+
+    width: 45px;
+    padding: 2px 0 0 0;
+}
+.header-login-phone > img{
+    scale: 0.9;
+}
+
 
 /*  КОНЕЦ Header  */
 
@@ -388,7 +463,7 @@ td{
     padding: 15px;
     align-items: center;
 }
-td:nth-child(1){
+td:nth-child(0){
     text-align: right;
 }
 input, select{
@@ -713,42 +788,23 @@ input[type="checkbox"], input[type="radio"] {
 	cursor:pointer;
     color: #3E62AC;
 }
-#error1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
-    background-color: #F8F3D6;
-    color: #8F6F36;
-    padding: 18px;
-    font-weight: 600;
-    font-size: 18px;
-
-    border: 2px solid #D3CCB5;
-    border-radius: 18px;
-}
-#error1 > div > font{
-    font-weight: 500;
-}
-#error1 > img{
-    cursor: pointer;
-}
-#error1 > img:hover{
-    filter: contrast(0.2);
-}
 /*  - КОНЕЦ Table  */
 
 .demo-container {
 	box-sizing: border-box;
-	width: 696px;
-	height: 100vw;
-	max-height: 80vh;
-	padding: 25px 30px 25px 15px;
-	margin: 15px auto 30px auto;
+
+    width: 100%;
+	height: 40vw;
+	max-height: 70vh;
+
+	padding: 30px 30px 30px 15px;
+	margin: 0;
+
 	border: 2px solid #D4D4D4;
 	border-radius: 35px;
 	background: white;
-	width: 100%;
+	
 }
 
 .demo-placeholder {
@@ -943,6 +999,31 @@ div.column3 {
 	column-rule: 1px solid #ccc;
 }
 
-#calc_table{
 
+
+
+
+#error1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: #F8F3D6;
+    color: #8F6F36;
+    padding: 18px;
+    font-weight: 600;
+    font-size: 18px;
+
+    border: 2px solid #D3CCB5;
+    border-radius: 18px;
 }
+#error1 > div > font{
+    font-weight: 500;
+}
+#error1 > img{
+    cursor: pointer;
+}
+#error1 > img:hover{
+    filter: contrast(0.2);
+}
+
