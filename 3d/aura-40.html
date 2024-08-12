@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="icon" type="image/x-icon" href="../source/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antarctis</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../font-face.css">
+</head>
+<body>
+    <header>
+        <img src="../source/antarctis_logo.svg" onclick="window.location.href = 'https://antarctis.ru'">
+        <div class="header-wr">
+            <a class="tel" href="tel:+74951217047" draggable="false">
+                <img src="../source/header-phone.svg">
+            </a> 
+            <a class="mail" href="mailto:mail@info@antarctis.ru">
+                <img src="../source/header-mail.svg" draggable="false">
+            </a>
+            <button class="header-login">Вход в аккаунт</button>
+        </div>
+        <button class="header-login-phone">
+            <img src="../source/login-btn.svg" draggable="false">
+        </button>
+    </header>
+    <div class="wrapper">
+        <div class="history-menu">
+            <a href="http://antarctis.ru">Главная ></a>
+            <a href="/">Подбор оборудования ></a>
+            <a href="/">3д ></a>
+            AURA 40
+        </div>
+        <div>
+            <h1>Просмотр AURA 40</h1>
+            <div class="h1-line"></div>
+        </div>
+        <div class="viewer-3d">
+            <iframe 
+            title="aura-40" 
+            frameborder="0" 
+            allowfullscreen 
+            mozallowfullscreen="true" 
+            webkitallowfullscreen="true" 
+            allow="fullscreen; autoplay; xr-spatial-tracking; camera; midi; encrypted-media" execution-while-out-of-viewport 
+            execution-while-not-rendered 
+            web-share 
+            width="100%" 
+            height="100%" 
+            src="https://hilarious-pearl.swiftxr.app">
+            </iframe>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
