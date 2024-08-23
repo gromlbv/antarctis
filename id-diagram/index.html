@@ -69,6 +69,9 @@
         $(".par").on('input', function() {
             recount_id();
         });
+
+        window.addEventListener("resize", recount_id);
+
         $(".point1_status").click(function(){
             ide3=$(this).attr("id").replace('_status','');
             e1=document.querySelector('input[value="c'+(chk_value1-1)+'"]');
@@ -111,9 +114,11 @@
             ide1=e1.getAttribute("id").replace('_status','');
             e2=document.querySelector('input[value="c'+chk_value1+'"]');
             ide2=e2.getAttribute("id").replace('_status','');
+            console.log(ide2);
             idi1=document.getElementById(ide1).value;
             idi2=document.getElementById(ide2).value;
-            $.post('https://app.antarctis.ru/calculate', {
+            console.log(document.getElementById(ide2));
+            $.post('/calculate', {
                 ide1 : ide1, 
                 ide2 : ide2, 
                 idi1 : idi1, 
@@ -134,7 +139,7 @@
                 idi2=document.getElementById(ide2).value;
 
                 if ($("#ad").is(':checked')==true) type=1; else type=0;
-                $.post('https://app.antarctis.ru/calculate', {
+                $.post('/calculate', {
                     t1 : t1, 
                     d1 : d1, 
                     i1 : i1, 
