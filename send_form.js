@@ -13,7 +13,7 @@ function chiller_1_submit(){
 }
 $(".chiller-1-submit").on("click", chiller_1_submit);
 
-function conditioner_submit(){
+async function conditioner_submit() {
     let name = "conditioner"
     let fields = {
         Теплоприток_от_оборудования: $('input[name*="1-conditioner"]').val(),
@@ -25,20 +25,29 @@ function conditioner_submit(){
         Зимний_комплект: $('select[name*="7-conditioner"]').val(),
         Протокол_сетевого_взаимодействия: $('input[name*="8-conditioner"]').val(),
     }
-    console.log(fields)
-    send_form(name, fields);
+
+    result = await send_form(name, fields);
+
+    if (result.status == 401) {
+        window.location.href = '/sign-up'
+        sessionStorage.setItem("--wait-auth-form", JSON.stringify(fields))
+        sessionStorage.setItem("--wait-auth-form-name", name)
+    }
+    if (result.status == 422) alert("Заполните обязательные поля!")
+    if (result.status == 200) window.location.href = '/profile'
+
 }
 $(".conditioner-submit").on("click", conditioner_submit);
-
 
 const send_form = async (name, fields) => {
     // :name - economizer, conditioner, absorber, chiller-1, chiller-2
     // :fields - поля в словаре ключ: строка или инт
-
+    
     result = await fetch(`/form/${name}`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(fields)
     })
+
     return result
 }

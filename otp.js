@@ -31,8 +31,17 @@ function nextDisable(){
           case 401: window.location.href = "/login" // пользователь не прошел первичную авторизацию
           case 400: window.location.reload(), noLog() // код не подошел
           case 422: window.location.reload() // чтото не то с валидацией полей
-          case 200: window.location.href = "/profile" // код 200 значит авторизация успешна
-          case 404: alert("Нет связи с сервером")
+          case 200: { // код 200 значит авторизация успешна
+            
+            if (sessionStorage.getItem("--wait-auth-form-name") != null){
+              send_form(sessionStorage.getItem("--wait-auth-form-name"), JSON.parse(sessionStorage.getItem("--wait-auth-form"))).then((r) => {
+                  window.location.reload()
+              })
+              sessionStorage.removeItem("--wait-auth-form")
+              sessionStorage.removeItem("--wait-auth-form-name")
+            }
+            window.location.href = "/profile"
+          }
       }
   }
   function noLog(){

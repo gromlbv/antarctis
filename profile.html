@@ -57,6 +57,16 @@
             <div class="pdf-card-wr"></div>
         </div>
     </div>
+    <script src="send_form.js"></script>
+    <script>
+        if (sessionStorage.getItem("--wait-auth-form-name") != null){
+            send_form(sessionStorage.getItem("--wait-auth-form-name"), JSON.parse(sessionStorage.getItem("--wait-auth-form"))).then((r) => {
+                window.location.reload()
+            })
+            sessionStorage.removeItem("--wait-auth-form")
+            sessionStorage.removeItem("--wait-auth-form-name")
+        }
+    </script>
     <script src="jquery.min.js"></script>
     <script src="script.js"></script>
     <script src="profile.js"></script>
