@@ -1027,3 +1027,10 @@ div.column3 {
     filter: contrast(0.2);
 }
 
+
+.align-left{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
